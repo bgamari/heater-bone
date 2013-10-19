@@ -1,0 +1,91 @@
+[options]
+# wordswap swaps labels if the pin is on the right side an looks like this:
+#   "PB1 (CLK)". That's useful for micro controller port labels
+# rotate_labels rotates the pintext of top and bottom pins
+#   this is useful for large symbols like FPGAs with more than 100 pins
+# sort_labels will sort the pins by it's labels
+#   useful for address ports, busses, ...
+wordswap=yes
+rotate_labels=no
+sort_labels=no
+generate_pinseq=yes
+sym_width=2000
+pinwidthvertical=400
+pinwidthhorizontal=400
+
+[geda_attr]
+# name will be printed in the top of the symbol
+# name is only some graphical text, not an attribute
+# version specifies a gschem version.
+# if you have a device with slots, you'll have to use slot= and slotdef=
+# use comment= if there are special information you want to add
+version=20060113 1
+name=BBB-P9
+device=BeagleBone
+refdes=J?
+footprint=HEADER 23 2
+description=BeagleBone expansion header P9
+author=Ben Gamari <bgamari@gmail.com>
+numslots=0
+
+[pins]
+# tabseparated list of pin descriptions
+# ----------------------------------------
+# pinnr is the physical number of the pin
+# seq is the pinseq= attribute, leave it blank if it doesn't matter
+# type can be (in, out, io, oc, oe, pas, tp, tri, clk, pwr)
+# style can be (line,dot,clk,dotclk,none). none if only want to add a net
+# posit. can be (l,r,t,b) or empty for nets
+# net specifies the name of the net. Vcc or GND for example.
+# label represents the pinlabel.
+#	negation lines can be added with "\_" example: \_enable\_ 
+#	if you want to write a "\" use "\\" as escape sequence
+#-----------------------------------------------------
+#pinnr	seq	type	style	posit.	net	label	
+#-----------------------------------------------------
+1		pwr	line	l		GND
+2		pwr	line	r		GND
+3		pwr	line	l		3V3
+4		pwr	line	r		3V3
+5		pwr	line	l		VDD_5V
+6		pwr	line	r		VDD_5V
+7		pwr	line	l		SYS_5V
+8		pwr	line	r		SYS_5V
+9		io	line	l		PWR_BUT
+10		io	line	r		\_SYS_RESET\_
+11		io	line	l		UART4_RXD
+12		io	line	r		GPIO1_28
+13		io	line	l		UART4_TXD
+14		io	line	r		EHRPWM1A
+15		io	line	l		GPIO1_16
+16		io	line	r		EHRPWM1B
+17		io	line	l		I2C1_SCL
+18		io	line	r		I2C1_SDA
+19		io	line	l		I2C2_SCL
+20		io	line	r		I2C2_SDA
+21		io	line	l		UART2_TXD
+22		io	line	r		UART2_RXD
+23		io	line	l		GPIO1_17
+24		io	line	r		UART1_TXD
+25		io	line	l		GPIO3_21
+26		io	line	r		UART1_RXD
+27		io	line	l		GPIO3_19
+28		io	line	r		SPI1_CS0
+29		io	line	l		SPI1_D0
+30		io	line	r		SPI1_D1
+31		io	line	l		SPI1_SCLK
+32		pwr	line	r		VADC
+33		out	line	l		AIN4
+34		pwr	line	r		AGND
+35		out	line	l		AIN6
+36		out	line	r		AIN5
+37		out	line	l		AIN2
+38		out	line	r		AIN3
+39		out	line	l		AIN0
+40		out	line	r		AIN1
+41		io	line	l		CLKOUT2
+42		io	line	r		GPIO0_7
+43		pwr	line	l		GND
+44		pwr	line	r		GND
+45		pwr	line	l		GND
+46		pwr	line	r		GND

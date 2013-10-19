@@ -1,0 +1,91 @@
+[options]
+# wordswap swaps labels if the pin is on the right side an looks like this:
+#   "PB1 (CLK)". That's useful for micro controller port labels
+# rotate_labels rotates the pintext of top and bottom pins
+#   this is useful for large symbols like FPGAs with more than 100 pins
+# sort_labels will sort the pins by it's labels
+#   useful for address ports, busses, ...
+wordswap=yes
+rotate_labels=no
+sort_labels=no
+generate_pinseq=yes
+sym_width=2000
+pinwidthvertical=400
+pinwidthhorizontal=400
+
+[geda_attr]
+# name will be printed in the top of the symbol
+# name is only some graphical text, not an attribute
+# version specifies a gschem version.
+# if you have a device with slots, you'll have to use slot= and slotdef=
+# use comment= if there are special information you want to add
+version=20060113 1
+name=BBB-P8
+device=BeagleBone
+refdes=J?
+footprint=HEADER 23 2
+description=BeagleBone expansion header P8
+author=Ben Gamari <bgamari@gmail.com>
+numslots=0
+
+[pins]
+# tabseparated list of pin descriptions
+# ----------------------------------------
+# pinnr is the physical number of the pin
+# seq is the pinseq= attribute, leave it blank if it doesn't matter
+# type can be (in, out, io, oc, oe, pas, tp, tri, clk, pwr)
+# style can be (line,dot,clk,dotclk,none). none if only want to add a net
+# posit. can be (l,r,t,b) or empty for nets
+# net specifies the name of the net. Vcc or GND for example.
+# label represents the pinlabel.
+#	negation lines can be added with "\_" example: \_enable\_ 
+#	if you want to write a "\" use "\\" as escape sequence
+#-----------------------------------------------------
+#pinnr	seq	type	style	posit.	net	label	
+#-----------------------------------------------------
+1		pwr	line	l		GND
+2		pwr	line	r		GND
+3		io	line	l		GPIO1_6
+4		io	line	r		GPIO1_7
+5		io	line	l		GPIO1_2
+6		io	line	r		GPIO1_3
+7		io	line	l		TIMER4
+8		io	line	r		TIMER7
+9		io	line	l		TIMER5
+10		io	line	r		TIMER6
+11		io	line	l		GPIO1_13
+12		io	line	r		GPIO1_12
+13		io	line	l		EHRPWM2B
+14		io	line	r		GPIO0_26
+15		io	line	l		GPIO1_15
+16		io	line	r		GPIO1_14
+17		io	line	l		GPIO0_27
+18		io	line	r		GPIO2_1
+19		io	line	l		EHRPWM2A
+20		io	line	r		GPIO1_31
+21		io	line	l		GPIO1_30
+22		io	line	r		GPIO1_5
+23		io	line	l		GPIO1_4
+24		io	line	r		GPIO1_1
+25		io	line	l		GPIO1_0
+26		io	line	r		GPIO1_29
+27		io	line	l		GPIO2_22
+28		io	line	r		GPIO2_24
+29		io	line	l		GPIO2_23
+30		io	line	r		GPIO2_25
+31		io	line	l		\_UART5_CTS\_
+32		io	line	r		\_UART5_RTS\_
+33		io	line	l		\_UART4_RTS\_
+34		io	line	r		\_UART3_RTS\_
+35		io	line	l		\_UART4_CTS\_
+36		io	line	r		\_UART3_CTS\_
+37		io	line	l		UART5_TXD
+38		io	line	r		UART5_RXD
+39		io	line	l		GPIO2_12
+40		io	line	r		GPIO2_13
+41		io	line	l		GPIO2_10
+42		io	line	r		GPIO2_11
+43		io	line	l		GPIO2_8
+44		io	line	r		GPIO2_9
+45		io	line	l		GPIO2_6
+46		io	line	r		GPIO2_7

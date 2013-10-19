@@ -1,0 +1,60 @@
+[options]
+# wordswap swaps labels if the pin is on the right side an looks like this:
+#   "PB1 (CLK)". That's useful for micro controller port labels
+# rotate_labels rotates the pintext of top and bottom pins
+#   this is useful for large symbols like FPGAs with more than 100 pins
+# sort_labels will sort the pins by it's labels
+#   useful for address ports, busses, ...
+wordswap=yes
+rotate_labels=no
+sort_labels=no
+generate_pinseq=yes
+sym_width=2000
+pinwidthvertical=400
+pinwidthhorizontal=400
+
+[geda_attr]
+# name will be printed in the top of the symbol
+# name is only some graphical text, not an attribute
+# version specifies a gschem version.
+# if you have a device with slots, you'll have to use slot= and slotdef=
+# use comment= if there are special information you want to add
+version=20060113 1
+name=ADT7411
+device=ADT7411
+refdes=U?
+footprint=SOP16
+description=Temperature sensor and 8-channel ADC
+author=Ben Gamari <bgamari@gmail.com>
+numslots=0
+
+[pins]
+# tabseparated list of pin descriptions
+# ----------------------------------------
+# pinnr is the physical number of the pin
+# seq is the pinseq= attribute, leave it blank if it doesn't matter
+# type can be (in, out, io, oc, oe, pas, tp, tri, clk, pwr)
+# style can be (line,dot,clk,dotclk,none). none if only want to add a net
+# posit. can be (l,r,t,b) or empty for nets
+# net specifies the name of the net. Vcc or GND for example.
+# label represents the pinlabel.
+#	negation lines can be added with "\_" example: \_enable\_ 
+#	if you want to write a "\" use "\\" as escape sequence
+#-----------------------------------------------------
+#pinnr	seq	type	style	posit.	net	label	
+#-----------------------------------------------------
+1		pwr	line	l		AIN6
+2		out	line	l		AIN5
+4		pwr	line	r		\_CS\_
+5		pwr	line	b		GND
+6		pwr	line	t		VDD
+7		pwr	line	l		AIN1
+8		pwr	line	l		AIN2
+9		pwr	line	l		AIN3
+10		pwr	line	r		INT
+11		pwr	line	r		DOUT
+12		pwr	line	r		SDA/DIN
+13		pwr	line	r		SCL/SCLK
+14		pwr	line	l		AIN4
+15		pwr	line	l		AIN8
+16		pwr	line	l		AIN7
