@@ -1,2 +1,38 @@
-v 20110115 2
-C 52300 28150 0 0 0 title-B.sym
+v 20121203 2
+C 48400 25400 1 0 0 bbb-p8.sym
+{
+T 50200 35200 5 10 1 1 0 6 1
+refdes=J?
+T 48800 35400 5 10 0 0 0 0 1
+device=BeagleBone
+T 48800 35600 5 10 0 0 0 0 1
+footprint=HEADER 23 2
+}
+C 72900 25900 1 0 0 bbb-p9.sym
+{
+T 75300 35700 5 10 1 1 0 6 1
+refdes=J?
+T 73300 35900 5 10 0 0 0 0 1
+device=BeagleBone
+T 73300 36100 5 10 0 0 0 0 1
+footprint=HEADER 23 2
+}
+C 45100 18700 0 0 0 title-D.sym
+C 60200 30400 1 0 0 ad7411.sym
+{
+T 62600 31700 5 10 1 1 0 6 1
+refdes=U?
+T 61400 31400 5 10 0 0 0 0 1
+device=ADT7411
+T 61400 31600 5 10 0 0 0 0 1
+footprint=SOP16
+}
+C 60700 34900 1 0 0 lcd.sym
+{
+T 68300 37800 5 10 1 1 0 6 1
+refdes=U?
+T 61900 37500 5 10 0 0 0 0 1
+device=LCD
+T 61900 37700 5 10 0 0 0 0 1
+footprint=DIP
+}
