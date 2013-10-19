@@ -1,0 +1,3 @@
+schematics .sch
+output-name heater-bone
+skip-m4

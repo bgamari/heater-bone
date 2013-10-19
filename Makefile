@@ -1,4 +1,4 @@
-name=myproject
+name=heater-bone
 
 %.sym : %.tsym
 	tragesym $< $@
