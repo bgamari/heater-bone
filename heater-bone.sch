@@ -692,7 +692,7 @@ C 47600 23000 1 0 0 capacitor-1.sym
 T 47800 23700 5 10 0 0 0 0 1
 device=CAPACITOR
 T 47700 23300 5 10 1 1 0 0 1
-refdes=C1
+refdes=C6
 T 47800 23900 5 10 0 0 0 0 1
 symversion=0.1
 T 47600 23000 5 10 1 1 0 0 1
@@ -947,3 +947,93 @@ N 62200 34300 62200 33700 4
 T 62200 33600 5 10 1 1 90 6 1
 netname=ADC_SCLK
 }
+C 47900 24000 1 90 0 capacitor-1.sym
+{
+T 47200 24200 5 10 0 0 90 0 1
+device=CAPACITOR
+T 47600 24100 5 10 1 1 90 0 1
+refdes=C3
+T 47000 24200 5 10 0 0 90 0 1
+symversion=0.1
+T 47900 24000 5 10 1 1 90 0 1
+value=10u
+}
+C 47500 24900 1 0 0 5V-plus-1.sym
+C 47600 23700 1 0 0 gnd-1.sym
+C 51300 22700 1 90 0 capacitor-1.sym
+{
+T 50600 22900 5 10 0 0 90 0 1
+device=CAPACITOR
+T 50400 22900 5 10 0 0 90 0 1
+symversion=0.1
+T 51000 22800 5 10 1 1 90 0 1
+refdes=C7
+T 51300 22700 5 10 1 1 90 0 1
+value=10u
+}
+C 51000 22400 1 0 0 gnd-1.sym
+C 57800 33100 1 90 0 capacitor-1.sym
+{
+T 57100 33300 5 10 0 0 90 0 1
+device=CAPACITOR
+T 56900 33300 5 10 0 0 90 0 1
+symversion=0.1
+T 57500 33200 5 10 1 1 90 0 1
+refdes=C5
+T 57800 33100 5 10 1 1 90 0 1
+value=100n
+}
+C 57400 34000 1 0 0 3.3V-plus-1.sym
+C 57500 32800 1 0 0 gnd-1.sym
+C 57200 33100 1 90 0 capacitor-1.sym
+{
+T 56500 33300 5 10 0 0 90 0 1
+device=CAPACITOR
+T 56300 33300 5 10 0 0 90 0 1
+symversion=0.1
+T 56900 33200 5 10 1 1 90 0 1
+refdes=C4
+T 57200 33100 5 10 1 1 90 0 1
+value=1u
+}
+C 56800 34000 1 0 0 3.3V-plus-1.sym
+C 56900 32800 1 0 0 gnd-1.sym
+C 47300 24000 1 90 0 capacitor-1.sym
+{
+T 46600 24200 5 10 0 0 90 0 1
+device=CAPACITOR
+T 47000 24100 5 10 1 1 90 0 1
+refdes=C2
+T 46400 24200 5 10 0 0 90 0 1
+symversion=0.1
+T 47300 24000 5 10 1 1 90 0 1
+value=100n
+}
+C 47000 23700 1 0 0 gnd-1.sym
+C 46900 24900 1 0 0 5V-plus-1.sym
+C 65900 29300 1 90 0 capacitor-1.sym
+{
+T 65200 29500 5 10 0 0 90 0 1
+device=CAPACITOR
+T 65000 29500 5 10 0 0 90 0 1
+symversion=0.1
+T 65600 29400 5 10 1 1 90 0 1
+refdes=C8
+T 65900 29300 5 10 1 1 90 0 1
+value=1u
+}
+C 65500 30200 1 0 0 3.3V-plus-1.sym
+C 65600 29000 1 0 0 gnd-1.sym
+C 45900 39000 1 90 0 capacitor-1.sym
+{
+T 45200 39200 5 10 0 0 90 0 1
+device=CAPACITOR
+T 45000 39200 5 10 0 0 90 0 1
+symversion=0.1
+T 45600 39100 5 10 1 1 90 0 1
+refdes=C1
+T 45900 39000 5 10 1 1 90 0 1
+value=1u
+}
+C 45500 39900 1 0 0 3.3V-plus-1.sym
+C 45600 38700 1 0 0 gnd-1.sym
