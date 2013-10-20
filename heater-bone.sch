@@ -2,7 +2,7 @@ v 20121203 2
 C 48400 25400 1 0 0 bbb-p8.sym
 {
 T 50200 35200 5 10 1 1 0 6 1
-refdes=J?
+refdes=J1
 T 48800 35400 5 10 0 0 0 0 1
 device=BeagleBone
 T 48800 35600 5 10 0 0 0 0 1
@@ -11,7 +11,7 @@ footprint=HEADER 23 2
 C 72900 25900 1 0 0 bbb-p9.sym
 {
 T 75300 35700 5 10 1 1 0 6 1
-refdes=J?
+refdes=J2
 T 73300 35900 5 10 0 0 0 0 1
 device=BeagleBone
 T 73300 36100 5 10 0 0 0 0 1
@@ -21,7 +21,7 @@ C 45100 18700 0 0 0 title-D.sym
 C 57500 28600 1 0 0 ad7411.sym
 {
 T 59900 32700 5 10 1 1 0 6 1
-refdes=U?
+refdes=U3
 T 58700 29600 5 10 0 0 0 0 1
 device=ADT7411
 T 58700 29800 5 10 0 0 0 0 1
@@ -87,7 +87,7 @@ netname=XBEE_TXD
 C 48100 36700 1 0 0 at24c01.sym
 {
 T 49900 39200 5 10 1 1 0 6 1
-refdes=U?
+refdes=U1
 T 49000 38300 5 10 0 0 0 0 1
 device=AT24C01
 T 49000 38500 5 10 0 0 0 0 1
@@ -123,9 +123,9 @@ N 48500 27500 47800 27500 4
 T 47700 27500 5 10 1 1 0 6 1
 netname=XBEE_TXD
 }
-N 51100 34300 51800 34300 4
+N 51100 32700 51800 32700 4
 {
-T 51900 34300 5 10 1 1 0 0 1
+T 51900 32700 5 10 1 1 0 0 1
 netname=HEATER_EN
 }
 C 66700 35000 1 0 0 npn-1.sym
@@ -133,7 +133,7 @@ C 66700 35000 1 0 0 npn-1.sym
 T 67300 35500 5 10 0 0 0 0 1
 device=NPN_TRANSISTOR
 T 67300 35500 5 10 1 1 0 0 1
-refdes=Q?
+refdes=Q1
 }
 N 65500 35500 65000 35500 4
 {
@@ -145,7 +145,7 @@ C 67400 36900 1 90 0 diode-1.sym
 T 66800 37300 5 10 0 0 90 0 1
 device=DIODE
 T 66900 37200 5 10 1 1 90 0 1
-refdes=D?
+refdes=D1
 }
 N 67200 38800 67200 37800 4
 N 67200 36900 67200 36000 4
@@ -191,7 +191,7 @@ C 48000 38700 1 90 0 resistor-1.sym
 T 47600 39000 5 10 0 0 90 0 1
 device=RESISTOR
 T 47700 38900 5 10 1 1 90 0 1
-refdes=R?
+refdes=R1
 T 47700 39200 5 10 1 1 90 0 1
 value=10k
 }
@@ -200,7 +200,7 @@ C 48000 37400 1 90 0 resistor-1.sym
 T 47600 37700 5 10 0 0 90 0 1
 device=RESISTOR
 T 47700 37600 5 10 1 1 90 0 1
-refdes=R?
+refdes=R2
 T 47700 37900 5 10 1 1 90 0 1
 value=10k
 }
@@ -211,7 +211,7 @@ C 51400 38000 1 180 0 resistor-1.sym
 T 51100 37600 5 10 0 0 180 0 1
 device=RESISTOR
 T 51200 37700 5 10 1 1 180 0 1
-refdes=R?
+refdes=R5
 T 50900 37700 5 10 1 1 180 0 1
 value=1k
 }
@@ -243,7 +243,7 @@ C 50500 39600 1 270 0 resistor-1.sym
 T 50900 39300 5 10 0 0 270 0 1
 device=RESISTOR
 T 50800 39400 5 10 1 1 270 0 1
-refdes=R?
+refdes=R3
 T 50800 39100 5 10 1 1 270 0 1
 value=1k
 }
@@ -252,7 +252,7 @@ C 51200 39200 1 270 0 resistor-1.sym
 T 51600 38900 5 10 0 0 270 0 1
 device=RESISTOR
 T 51500 39000 5 10 1 1 270 0 1
-refdes=R?
+refdes=R4
 T 51500 38700 5 10 1 1 270 0 1
 value=1k
 }
@@ -296,7 +296,7 @@ C 62900 21500 1 180 0 gnd-1.sym
 C 65800 25200 1 0 0 tca6507.sym
 {
 T 67600 28900 5 10 1 1 0 6 1
-refdes=U?
+refdes=U4
 T 66700 27400 5 10 0 0 0 0 1
 device=TCA6507
 T 66700 27600 5 10 0 0 0 0 1
@@ -361,7 +361,7 @@ C 68100 28300 1 0 0 resistor-1.sym
 T 68400 28700 5 10 0 0 0 0 1
 device=RESISTOR
 T 68300 28500 5 10 1 1 0 0 1
-refdes=R?
+refdes=R22
 T 68600 28500 5 10 1 1 0 0 1
 value=1k
 }
@@ -370,7 +370,7 @@ C 68100 27900 1 0 0 resistor-1.sym
 T 68400 28300 5 10 0 0 0 0 1
 device=RESISTOR
 T 68300 28100 5 10 1 1 0 0 1
-refdes=R?
+refdes=R23
 T 68600 28100 5 10 1 1 0 0 1
 value=1k
 }
@@ -379,7 +379,7 @@ C 68100 27500 1 0 0 resistor-1.sym
 T 68400 27900 5 10 0 0 0 0 1
 device=RESISTOR
 T 68300 27700 5 10 1 1 0 0 1
-refdes=R?
+refdes=R24
 T 68600 27700 5 10 1 1 0 0 1
 value=1k
 }
@@ -390,7 +390,7 @@ C 68100 27100 1 0 0 resistor-1.sym
 T 68400 27500 5 10 0 0 0 0 1
 device=RESISTOR
 T 68300 27300 5 10 1 1 0 0 1
-refdes=R?
+refdes=R25
 T 68600 27300 5 10 1 1 0 0 1
 value=1k
 }
@@ -401,7 +401,7 @@ C 68100 26700 1 0 0 resistor-1.sym
 T 68400 27100 5 10 0 0 0 0 1
 device=RESISTOR
 T 68300 26900 5 10 1 1 0 0 1
-refdes=R?
+refdes=R26
 T 68600 26900 5 10 1 1 0 0 1
 value=1k
 }
@@ -410,7 +410,7 @@ C 68100 26300 1 0 0 resistor-1.sym
 T 68400 26700 5 10 0 0 0 0 1
 device=RESISTOR
 T 68300 26500 5 10 1 1 0 0 1
-refdes=R?
+refdes=R27
 T 68600 26500 5 10 1 1 0 0 1
 value=1k
 }
@@ -419,7 +419,7 @@ C 68100 25900 1 0 0 resistor-1.sym
 T 68400 26300 5 10 0 0 0 0 1
 device=RESISTOR
 T 68300 26100 5 10 1 1 0 0 1
-refdes=R?
+refdes=R28
 T 68600 26100 5 10 1 1 0 0 1
 value=0
 }
@@ -455,7 +455,7 @@ C 55100 29300 1 0 0 resistor-1.sym
 T 55400 29700 5 10 0 0 0 0 1
 device=RESISTOR
 T 55300 29500 5 10 1 1 0 0 1
-refdes=R?
+refdes=R17
 T 55600 29500 5 10 1 1 0 0 1
 value=1k
 }
@@ -464,7 +464,7 @@ N 56000 29400 57600 29400 4
 C 57100 32600 1 180 0 connector8-2.sym
 {
 T 56400 28900 5 10 1 1 180 6 1
-refdes=CONN?
+refdes=CONN1
 T 56800 28950 5 10 0 0 180 0 1
 device=CONNECTOR_8
 T 56800 28750 5 10 0 0 180 0 1
@@ -475,7 +475,7 @@ C 65500 35400 1 0 0 resistor-1.sym
 T 65800 35800 5 10 0 0 0 0 1
 device=RESISTOR
 T 65700 35700 5 10 1 1 0 0 1
-refdes=R?
+refdes=R21
 T 66000 35700 5 10 1 1 0 0 1
 value=1k
 }
@@ -561,7 +561,7 @@ C 55100 29700 1 0 0 resistor-1.sym
 T 55400 30100 5 10 0 0 0 0 1
 device=RESISTOR
 T 55300 29900 5 10 1 1 0 0 1
-refdes=R?
+refdes=R16
 T 55600 29900 5 10 1 1 0 0 1
 value=1k
 }
@@ -572,7 +572,7 @@ C 55100 30100 1 0 0 resistor-1.sym
 T 55400 30500 5 10 0 0 0 0 1
 device=RESISTOR
 T 55300 30300 5 10 1 1 0 0 1
-refdes=R?
+refdes=R15
 T 55600 30300 5 10 1 1 0 0 1
 value=1k
 }
@@ -583,7 +583,7 @@ C 55100 30500 1 0 0 resistor-1.sym
 T 55400 30900 5 10 0 0 0 0 1
 device=RESISTOR
 T 55300 30700 5 10 1 1 0 0 1
-refdes=R?
+refdes=R14
 T 55600 30700 5 10 1 1 0 0 1
 value=1k
 }
@@ -594,7 +594,7 @@ C 55100 30900 1 0 0 resistor-1.sym
 T 55400 31300 5 10 0 0 0 0 1
 device=RESISTOR
 T 55300 31100 5 10 1 1 0 0 1
-refdes=R?
+refdes=R13
 T 55600 31100 5 10 1 1 0 0 1
 value=1k
 }
@@ -605,7 +605,7 @@ C 55100 31300 1 0 0 resistor-1.sym
 T 55400 31700 5 10 0 0 0 0 1
 device=RESISTOR
 T 55300 31500 5 10 1 1 0 0 1
-refdes=R?
+refdes=R12
 T 55600 31500 5 10 1 1 0 0 1
 value=1k
 }
@@ -616,7 +616,7 @@ C 55100 31700 1 0 0 resistor-1.sym
 T 55400 32100 5 10 0 0 0 0 1
 device=RESISTOR
 T 55300 31900 5 10 1 1 0 0 1
-refdes=R?
+refdes=R11
 T 55600 31900 5 10 1 1 0 0 1
 value=1k
 }
@@ -627,7 +627,7 @@ C 55100 32100 1 0 0 resistor-1.sym
 T 55400 32500 5 10 0 0 0 0 1
 device=RESISTOR
 T 55300 32300 5 10 1 1 0 0 1
-refdes=R?
+refdes=R10
 T 55600 32300 5 10 1 1 0 0 1
 value=1k
 }
@@ -636,7 +636,7 @@ N 56000 32200 57600 32200 4
 C 48400 21600 1 0 0 lp3982.sym
 {
 T 50200 24100 5 10 1 1 0 6 1
-refdes=U?
+refdes=U2
 T 48800 24300 5 10 0 0 0 0 1
 device=LP3982
 T 48800 24500 5 10 0 0 0 0 1
@@ -648,7 +648,7 @@ C 47600 23000 1 0 0 capacitor-1.sym
 T 47800 23700 5 10 0 0 0 0 1
 device=CAPACITOR
 T 47700 23300 5 10 1 1 0 0 1
-refdes=C?
+refdes=C1
 T 47800 23900 5 10 0 0 0 0 1
 symversion=0.1
 T 47600 23000 5 10 1 1 0 0 1
@@ -758,7 +758,7 @@ C 59500 39400 1 0 0 resistor-1.sym
 T 59800 39800 5 10 0 0 0 0 1
 device=RESISTOR
 T 59700 39600 5 10 1 1 0 0 1
-refdes=R?
+refdes=R6
 T 60000 39600 5 10 1 1 0 0 1
 value=1k
 }
@@ -768,7 +768,7 @@ C 59500 38700 1 0 0 resistor-1.sym
 T 59800 39100 5 10 0 0 0 0 1
 device=RESISTOR
 T 59700 38900 5 10 1 1 0 0 1
-refdes=R?
+refdes=R7
 T 60000 38900 5 10 1 1 0 0 1
 value=1k
 }
@@ -778,7 +778,7 @@ C 59500 38000 1 0 0 resistor-1.sym
 T 59800 38400 5 10 0 0 0 0 1
 device=RESISTOR
 T 59700 38200 5 10 1 1 0 0 1
-refdes=R?
+refdes=R8
 T 60000 38200 5 10 1 1 0 0 1
 value=1k
 }
@@ -788,7 +788,7 @@ C 59500 37300 1 0 0 resistor-1.sym
 T 59800 37700 5 10 0 0 0 0 1
 device=RESISTOR
 T 59700 37500 5 10 1 1 0 0 1
-refdes=R?
+refdes=R9
 T 60000 37500 5 10 1 1 0 0 1
 value=1k
 }
@@ -835,7 +835,7 @@ netname=BTN1
 C 69000 35400 1 270 0 connector2-2.sym
 {
 T 70300 34700 5 10 1 1 270 6 1
-refdes=CONN?
+refdes=CONN2
 T 70250 35100 5 10 0 0 270 0 1
 device=CONNECTOR_2
 T 70450 35100 5 10 0 0 270 0 1
@@ -849,7 +849,7 @@ C 61100 34300 1 90 0 resistor-1.sym
 T 60700 34600 5 10 0 0 90 0 1
 device=RESISTOR
 T 60900 34500 5 10 1 1 90 0 1
-refdes=R?
+refdes=R18
 T 60900 34800 5 10 1 1 90 0 1
 value=1k
 }
@@ -864,7 +864,7 @@ C 61700 34300 1 90 0 resistor-1.sym
 T 61300 34600 5 10 0 0 90 0 1
 device=RESISTOR
 T 61500 34500 5 10 1 1 90 0 1
-refdes=R?
+refdes=R19
 T 61500 34800 5 10 1 1 90 0 1
 value=1k
 }
@@ -879,7 +879,7 @@ C 62300 34300 1 90 0 resistor-1.sym
 T 61900 34600 5 10 0 0 90 0 1
 device=RESISTOR
 T 62100 34500 5 10 1 1 90 0 1
-refdes=R?
+refdes=R20
 T 62100 34800 5 10 1 1 90 0 1
 value=1k
 }
