@@ -25,7 +25,7 @@ refdes=U3
 T 58700 29600 5 10 0 0 0 0 1
 device=ADT7411
 T 58700 29800 5 10 0 0 0 0 1
-footprint=SOP16
+footprint=QSOP-16
 }
 C 62300 18100 1 0 0 lcd.sym
 {
