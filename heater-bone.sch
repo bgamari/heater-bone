@@ -769,6 +769,8 @@ T 58900 39800 5 10 1 1 0 0 1
 refdes=BTN1
 T 58900 40100 5 10 0 0 0 0 1
 device=SWITCH_PUSHBUTTON_NO
+T 58500 39500 5 10 1 1 0 0 1
+footprint=tl3301
 }
 C 58500 38800 1 0 0 switch-pushbutton-no-1.sym
 {
@@ -776,6 +778,8 @@ T 58900 39100 5 10 1 1 0 0 1
 refdes=BTN2
 T 58900 39400 5 10 0 0 0 0 1
 device=SWITCH_PUSHBUTTON_NO
+T 58500 38800 5 10 1 1 0 0 1
+footprint=tl3301
 }
 C 58500 38100 1 0 0 switch-pushbutton-no-1.sym
 {
@@ -783,6 +787,8 @@ T 58900 38400 5 10 1 1 0 0 1
 refdes=BTN3
 T 58900 38700 5 10 0 0 0 0 1
 device=SWITCH_PUSHBUTTON_NO
+T 58500 38100 5 10 1 1 0 0 1
+footprint=tl3301
 }
 C 58500 37400 1 0 0 switch-pushbutton-no-1.sym
 {
@@ -790,6 +796,8 @@ T 58900 37700 5 10 1 1 0 0 1
 refdes=BTN4
 T 58900 38000 5 10 0 0 0 0 1
 device=SWITCH_PUSHBUTTON_NO
+T 58500 37400 5 10 1 1 0 0 1
+footprint=tl3301
 }
 C 60400 39700 1 270 0 3.3V-plus-1.sym
 C 59500 39400 1 0 0 resistor-1.sym
@@ -1048,8 +1056,10 @@ C 45500 39900 1 0 0 3.3V-plus-1.sym
 C 45600 38700 1 0 0 gnd-1.sym
 C 66700 35000 1 0 0 bc817.sym
 {
+T 67300 36300 5 10 0 1 0 0 1
+footprint=SOT23
 T 67300 35500 5 10 0 0 0 0 1
 device=NPN_TRANSISTOR
 T 67300 35500 5 10 1 1 0 0 1
-refdes=Q?
+refdes=Q1
 }
