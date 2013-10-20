@@ -23,7 +23,7 @@ version=20060113 1
 name=Encoder
 device=Rotary encoder
 refdes=U?
-footprint=encoder
+footprint=sparkfun-red-green-encoder
 description=Rotary encoder with red/green LED
 author=Ben Gamari <bgamari@gmail.com>
 numslots=0
@@ -43,10 +43,10 @@ numslots=0
 #-----------------------------------------------------
 #pinnr	seq	type	style	posit.	net	label	
 #-----------------------------------------------------
-1		io	line	l		A
-2		io	line	l		B
-3		io	line	l		C
-7		in	line	r		switch
-6		in	line	r		Green
-5		in	line	r		Red
-4		pwr	line	r		GND
+A		io	line	l		A
+C		io	line	l		C
+B		io	line	l		B
+4		in	line	r		SW
+3		in	line	r		RED
+2		in	line	r		GREEN
+1		pwr	line	r		GND

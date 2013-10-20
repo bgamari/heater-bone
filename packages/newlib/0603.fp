@@ -1,0 +1,9 @@
+Element["" "0603" "Name" "Val" 1000 1000 0nm -2000000nm 0 100 ""]
+(
+	Pad[-950000nm 0nm -850000nm 0nm 800000nm 304800nm 952400nm "1" "1" "square"]
+	Pad[850000nm 0nm 950000nm 0nm 800000nm 304800nm 952400nm "2" "2" "square"]
+	ElementLine [1502400nm 552400nm -1502400nm 552400nm 127000nm]
+	ElementLine [-1502400nm 552400nm -1502400nm -552400nm 127000nm]
+	ElementLine [-1502400nm -552400nm 1502400nm -552400nm 127000nm]
+	ElementLine [1502400nm -552400nm 1502400nm 552400nm 127000nm]
+)
