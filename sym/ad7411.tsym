@@ -43,18 +43,18 @@ numslots=0
 #-----------------------------------------------------
 #pinnr	seq	type	style	posit.	net	label	
 #-----------------------------------------------------
-1		pwr	line	l		AIN6
-2		out	line	l		AIN5
-4		pwr	line	r		\_CS\_
-5		pwr	line	b		GND
-6		pwr	line	t		VDD
 7		pwr	line	l		AIN1
 8		pwr	line	l		AIN2
 9		pwr	line	l		AIN3
+14		pwr	line	l		AIN4
+2		out	line	l		AIN5
+1		pwr	line	l		AIN6
+16		pwr	line	l		AIN7
+15		pwr	line	l		AIN8
+5		pwr	line	b		GND
+6		pwr	line	t		VDD
 10		pwr	line	r		INT
 11		pwr	line	r		DOUT
 12		pwr	line	r		SDA/DIN
 13		pwr	line	r		SCL/SCLK
-14		pwr	line	l		AIN4
-15		pwr	line	l		AIN8
-16		pwr	line	l		AIN7
+4		pwr	line	r		\_CS\_
