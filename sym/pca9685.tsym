@@ -9,7 +9,7 @@ wordswap=yes
 rotate_labels=no
 sort_labels=no
 generate_pinseq=yes
-sym_width=1400
+sym_width=2000
 pinwidthvertical=400
 pinwidthhorizontal=400
 
@@ -20,11 +20,11 @@ pinwidthhorizontal=400
 # if you have a device with slots, you'll have to use slot= and slotdef=
 # use comment= if there are special information you want to add
 version=20060113 1
-name=TCA6507
-device=TCA6507
+name=PCA9685
+device=PCA9685
 refdes=U?
-footprint=TSSOP-65P-640L1-14N
-description=I2C LED driver
+footprint=TSSOP-28
+description=16-channel PWM LED driver
 author=Ben Gamari <bgamari@gmail.com>
 numslots=0
 
@@ -43,15 +43,30 @@ numslots=0
 #-----------------------------------------------------
 #pinnr	seq	type	style	posit.	net	label	
 #-----------------------------------------------------
-1		pwr	line	t		VCC
-2		in	line	l		SCL
-3		io	line	l		SDA
-4		in	line	l		EN
-5		pwr	line	b		GND
-8		out	line	r		P0
-9		out	line	r		P1
-10		out	line	r		P2
-11		out	line	r		P3
-12		out	line	r		P4
-13		out	line	r		P5
-14		out	line	r		P6
+1		in	line	l		A0
+2		in	line	l		A1
+3		in	line	l		A2
+4 		in	line	l		A3
+5		in	line	l		A4
+24		in	line	l		A5
+6		out	line	r		LED0
+7		out	line	r		LED1
+8		out	line	r		LED2
+9		out	line	r		LED3
+10		out	line	r		LED4
+11		out	line	r		LED5
+12		out	line	r		LED6
+13		out	line	r		LED7
+14		pwr	line	b		VSS
+15		out	line	r		LED8
+16		out	line	r		LED9
+17		out	line	r		LED10
+18		out	line	r		LED11
+19		out	line	r		LED12
+21		out	line	r		LED13
+22		out	line	r		LED14
+23		in	line	l		\_OE\_
+25		in	line	l		EXTCLK
+26		in	line	l		SCL
+27		in	line	l		SDA
+28		pwr	line	t		VDD
