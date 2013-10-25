@@ -764,7 +764,7 @@ symversion=0.1
 T 49800 22800 5 10 1 1 90 0 1
 refdes=C7
 T 50100 22700 5 10 1 1 90 0 1
-value=10u
+value=2.2u
 T 50100 22700 5 10 0 1 0 0 1
 footprint=0603
 }
