@@ -2026,7 +2026,7 @@ Layer(1 "top")
 	Line[28.9150mm 5.3750mm 1150.00mil 200.00mil 10.00mil 20.00mil "clearline"]
 	Line[50.00mil 2150.00mil 50.00mil 350.00mil 25.00mil 20.00mil "clearline"]
 	Line[50.00mil 350.00mil 200.00mil 200.00mil 25.00mil 20.00mil "clearline"]
-	Line[200.00mil 200.00mil 1075.00mil 200.00mil 25.00mil 20.00mil "clearline,selected"]
+	Line[200.00mil 200.00mil 1075.00mil 200.00mil 25.00mil 20.00mil "clearline"]
 	Line[2200.00mil 1500.00mil 2250.00mil 1450.00mil 10.00mil 20.00mil "clearline"]
 	Line[2400.00mil 1400.00mil 2300.00mil 1400.00mil 10.00mil 20.00mil "clearline"]
 	Line[2200.00mil 1400.00mil 2250.00mil 1350.00mil 10.00mil 20.00mil "clearline"]
@@ -2640,7 +2640,9 @@ Layer(2 "bottom")
 	Line[212.50mil 3137.50mil 212.50mil 2900.00mil 10.00mil 20.00mil "clearline"]
 	Line[900.00mil 100.00mil 23.8650mm 100.00mil 10.00mil 20.00mil "clearline"]
 	Line[25.6650mm 100.00mil 1050.00mil 100.00mil 10.00mil 20.00mil "clearline"]
-	Line[1050.00mil 100.00mil 1150.00mil 5.0800mm 10.00mil 20.00mil "clearline"]
+	Line[1050.00mil 100.00mil 1150.00mil 200.00mil 10.00mil 20.00mil "clearline"]
+	Line[100.00mil 800.00mil 100.00mil 1000.00mil 10.00mil 20.00mil "clearline"]
+	Line[100.00mil 1000.00mil 300.00mil 1200.00mil 10.00mil 20.00mil "clearline"]
 )
 Layer(3 "ground")
 (
@@ -3016,13 +3018,10 @@ NetList()
 		Connect("NRF24-3")
 		Connect("P9-25")
 	)
-	Net("NRF_INT" "(unknown)")
-	(
-		Connect("P9-27")
-	)
 	Net("NRF_IRQ" "(unknown)")
 	(
 		Connect("NRF24-8")
+		Connect("P9-27")
 	)
 	Net("SPI1_MISO" "(unknown)")
 	(
