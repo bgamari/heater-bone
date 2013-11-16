@@ -9,7 +9,7 @@ Grid[2500.000000 0.0000 0.0000 0]
 PolyArea[200000000.000000]
 Thermal[0.500000]
 DRC[6.00mil 10.00mil 6.00mil 10.00mil 15.00mil 8.00mil]
-Flags("showdrc,rubberband,nameonpcb,clearnew,snappin,thindrawpoly,onlynames")
+Flags("showdrc,rubberband,nameonpcb,clearnew,snappin,thindrawpoly,locknames")
 Groups("1,3,4,c:2,s:5:6")
 Styles["Signal,10.00mil,36.00mil,20.00mil,10.00mil:Power,25.00mil,60.00mil,35.00mil,10.00mil:Fat,40.00mil,60.00mil,35.00mil,10.00mil:Skinny,6.00mil,24.02mil,11.81mil,6.00mil"]
 
@@ -785,7 +785,7 @@ Symbol['~' 12.00mil]
 	SymbolLine[15.00mil 35.00mil 20.00mil 35.00mil 8.00mil]
 	SymbolLine[20.00mil 35.00mil 25.00mil 30.00mil 8.00mil]
 )
-Attribute("PCB::grid::unit" "mil")
+Attribute("PCB::grid::unit" "mm")
 Attribute("PCB::grid::size" "25.00mil")
 Via[600.00mil 405.00mil 36.00mil 20.00mil 0.0000 20.00mil "" ""]
 Via[675.00mil 600.00mil 36.00mil 20.00mil 0.0000 20.00mil "" ""]
@@ -1038,7 +1038,7 @@ Element["" "tl3301" "BTN1" "unknown" 1200.00mil 1750.00mil 2.0300mm -6.6100mm 1 
 
 	)
 
-Element["onsolder" "CONNECTOR-46-2" "P8" "unknown" 2200.00mil 1100.00mil -25.00mil -50.00mil 0 100 "auto"]
+Element["onsolder" "CONNECTOR-46-2" "P8" "unknown" 2200.00mil 1100.00mil -125.00mil 25.00mil 0 100 "auto"]
 (
 	Pin[0.0000 0.0000 60.00mil 30.00mil 66.00mil 38.00mil "" "1" "thermal(2X)"]
 	Pin[100.00mil 0.0000 60.00mil 30.00mil 66.00mil 38.00mil "" "2" "thermal(2X)"]
@@ -1454,17 +1454,6 @@ Element["onsolder" "0603" "R17" "unknown" 325.00mil 400.00mil -50.00mil -0.5400m
 	ElementLine [1.5024mm -0.5524mm 1.5024mm 0.5524mm 5.00mil]
 	ElementLine [-1.5024mm -0.5524mm 1.5024mm -0.5524mm 5.00mil]
 	ElementLine [-1.5024mm -0.5524mm -1.5024mm 0.5524mm 5.00mil]
-
-	)
-
-Element["onsolder" "0603" "R5" "1k" 940.00mil 54.9800mm 0.6240mm 1.8840mm 0 100 "auto"]
-(
-	Pad[0.0000 -0.9500mm 0.0000 -0.8500mm 0.8000mm 12.00mil 0.9524mm "1" "1" "onsolder,square"]
-	Pad[0.0000 0.8500mm 0.0000 0.9500mm 0.8000mm 12.00mil 0.9524mm "2" "2" "onsolder,square,edge2"]
-	ElementLine [0.5524mm -1.5024mm 0.5524mm 1.5024mm 5.00mil]
-	ElementLine [-0.5524mm -1.5024mm 0.5524mm -1.5024mm 5.00mil]
-	ElementLine [-0.5524mm -1.5024mm -0.5524mm 1.5024mm 5.00mil]
-	ElementLine [-0.5524mm 1.5024mm 0.5524mm 1.5024mm 5.00mil]
 
 	)
 
@@ -1932,19 +1921,6 @@ Element["" "0603" "LED6" "unknown" 575.00mil 2925.00mil -0.7300mm 200.00mil 1 10
 
 	)
 
-Element["" "tl3301" "BTN2" "unknown" 900.00mil 2125.00mil 3.9350mm 4.1850mm 1 100 ""]
-(
-	Pad[-2.9500mm 3.5000mm -2.9500mm 5.6000mm 1.4000mm 20.00mil 1.8080mm "" "1" "square,edge2"]
-	Pad[-2.9500mm -5.6000mm -2.9500mm -3.5000mm 1.4000mm 20.00mil 1.8080mm "" "2" "square"]
-	Pad[2.9500mm 3.5000mm 2.9500mm 5.6000mm 1.4000mm 20.00mil 1.8080mm "" "3" "square,edge2"]
-	Pad[2.9500mm -5.6000mm 2.9500mm -3.5000mm 1.4000mm 20.00mil 1.8080mm "" "4" "square"]
-	ElementLine [3.8000mm -6.5000mm 3.8000mm 6.5000mm 10.00mil]
-	ElementLine [-3.8000mm 6.5000mm 3.8000mm 6.5000mm 10.00mil]
-	ElementLine [-3.8000mm -6.5000mm -3.8000mm 6.5000mm 10.00mil]
-	ElementLine [-3.8000mm -6.5000mm 3.8000mm -6.5000mm 10.00mil]
-
-	)
-
 Element["" "tl3301" "BTN3" "unknown" 900.00mil 1375.00mil 3.9350mm -2.8000mm 1 100 ""]
 (
 	Pad[-2.9500mm 3.5000mm -2.9500mm 5.6000mm 1.4000mm 20.00mil 1.8080mm "" "1" "square,edge2"]
@@ -2010,7 +1986,7 @@ Element["onsolder" "0603" "R3" "1k" 61.9650mm 1700.00mil 0.0000 2.0000mm 0 100 "
 
 	)
 
-Element["onsolder" "SMD-6" "U5" "unknown" 54.4350mm 875.00mil 0.0000 2.0000mm 0 100 "auto"]
+Element["onsolder" "SMD-6" "U5" "unknown" 54.4350mm 875.00mil 250.00mil 3.9050mm 0 100 "auto"]
 (
 	Pad[-5.1000mm 100.00mil -4.9000mm 100.00mil 1.8000mm 12.00mil 1.9524mm "1" "1" "onsolder,square"]
 	Pad[-5.1000mm 0.0000 -4.9000mm 0.0000 1.8000mm 12.00mil 1.9524mm "2" "2" "onsolder,square"]
@@ -2024,6 +2000,19 @@ Element["onsolder" "SMD-6" "U5" "unknown" 54.4350mm 875.00mil 0.0000 2.0000mm 0 
 	ElementLine [6.1524mm 3.5924mm 6.1524mm -3.5924mm 5.00mil]
 	ElementLine [0.0000 2.5924mm -1.0000mm 3.5924mm 5.00mil]
 	ElementLine [0.0000 2.5924mm 1.0000mm 3.5924mm 5.00mil]
+
+	)
+
+Element["" "tl3301" "BTN2" "unknown" 900.00mil 2125.00mil 3.9350mm 4.1850mm 1 100 ""]
+(
+	Pad[-2.9500mm 3.5000mm -2.9500mm 5.6000mm 1.4000mm 20.00mil 1.8080mm "" "1" "square,edge2"]
+	Pad[-2.9500mm -5.6000mm -2.9500mm -3.5000mm 1.4000mm 20.00mil 1.8080mm "" "2" "square"]
+	Pad[2.9500mm 3.5000mm 2.9500mm 5.6000mm 1.4000mm 20.00mil 1.8080mm "" "3" "square,edge2"]
+	Pad[2.9500mm -5.6000mm 2.9500mm -3.5000mm 1.4000mm 20.00mil 1.8080mm "" "4" "square"]
+	ElementLine [3.8000mm -6.5000mm 3.8000mm 6.5000mm 10.00mil]
+	ElementLine [-3.8000mm 6.5000mm 3.8000mm 6.5000mm 10.00mil]
+	ElementLine [-3.8000mm -6.5000mm -3.8000mm 6.5000mm 10.00mil]
+	ElementLine [-3.8000mm -6.5000mm 3.8000mm -6.5000mm 10.00mil]
 
 	)
 Layer(1 "top")
@@ -2541,11 +2530,8 @@ Layer(2 "bottom")
 	Line[575.00mil 2075.00mil 600.00mil 2100.00mil 25.00mil 20.00mil "clearline"]
 	Line[641.74mil 54.2701mm 603.38mil 54.2701mm 10.00mil 20.00mil "clearline"]
 	Line[603.38mil 54.2701mm 600.00mil 2140.00mil 10.00mil 20.00mil "clearline"]
-	Line[858.26mil 55.5699mm 927.79mil 55.5699mm 10.00mil 20.00mil "clearline"]
-	Line[927.79mil 55.5699mm 940.00mil 2200.00mil 10.00mil 20.00mil "clearline"]
 	Line[858.26mil 54.9201mm 858.26mil 52.7878mm 10.00mil 20.00mil "clearline"]
 	Line[858.26mil 52.7878mm 855.00mil 2075.00mil 10.00mil 20.00mil "clearline"]
-	Line[940.00mil 54.0800mm 940.00mil 2075.00mil 10.00mil 20.00mil "clearline"]
 	Line[1550.00mil 3250.00mil 1275.00mil 3250.00mil 25.00mil 20.00mil "clearline"]
 	Line[1275.00mil 3250.00mil 1250.00mil 3225.00mil 25.00mil 20.00mil "clearline"]
 	Line[1250.00mil 3225.00mil 1250.00mil 2775.00mil 25.00mil 20.00mil "clearline"]
@@ -2740,6 +2726,7 @@ Layer(2 "bottom")
 	Line[2150.00mil 675.00mil 2150.00mil 825.00mil 25.00mil 20.00mil "clearline"]
 	Line[2300.00mil 975.00mil 2150.00mil 825.00mil 25.00mil 20.00mil "clearline"]
 	Line[2300.00mil 1700.00mil 2400.00mil 1700.00mil 25.00mil 20.00mil "clearline"]
+	Line[858.26mil 55.5699mm 858.26mil 55.0352mm 10.00mil 20.00mil "clearline"]
 )
 Layer(3 "ground")
 (
@@ -2812,7 +2799,6 @@ NetList()
 		Connect("P9-4")
 		Connect("R1-2")
 		Connect("R2-1")
-		Connect("R5-1")
 		Connect("R10-1")
 		Connect("R11-1")
 		Connect("R14-1")
@@ -2828,6 +2814,7 @@ NetList()
 		Connect("RGB_LED-2")
 		Connect("U1-1")
 		Connect("U1-2")
+		Connect("U1-3")
 		Connect("U1-8")
 		Connect("U3-6")
 		Connect("U4-28")
@@ -3206,130 +3193,125 @@ NetList()
 	)
 	Net("unnamed_net9" "(unknown)")
 	(
-		Connect("R5-2")
-		Connect("U1-3")
-	)
-	Net("unnamed_net10" "(unknown)")
-	(
 		Connect("R22-2")
 		Connect("RGB_LED-3")
 	)
-	Net("unnamed_net11" "(unknown)")
+	Net("unnamed_net10" "(unknown)")
 	(
 		Connect("R22-1")
 		Connect("U4-19")
 	)
-	Net("unnamed_net12" "(unknown)")
+	Net("unnamed_net11" "(unknown)")
 	(
 		Connect("R23-2")
 		Connect("RGB_LED-4")
 	)
-	Net("unnamed_net13" "(unknown)")
+	Net("unnamed_net12" "(unknown)")
 	(
 		Connect("R23-1")
 		Connect("U4-20")
 	)
-	Net("unnamed_net14" "(unknown)")
+	Net("unnamed_net13" "(unknown)")
 	(
 		Connect("R24-2")
 		Connect("RGB_LED-1")
 	)
-	Net("unnamed_net15" "(unknown)")
+	Net("unnamed_net14" "(unknown)")
 	(
 		Connect("R24-1")
 		Connect("U4-21")
 	)
-	Net("unnamed_net16" "(unknown)")
+	Net("unnamed_net15" "(unknown)")
 	(
 		Connect("Q1-1")
 		Connect("R21-2")
 	)
-	Net("unnamed_net17" "(unknown)")
+	Net("unnamed_net16" "(unknown)")
 	(
 		Connect("C6-2")
 		Connect("U2-6")
 	)
-	Net("unnamed_net18" "(unknown)")
+	Net("unnamed_net17" "(unknown)")
 	(
 		Connect("LED_XBEE-2")
 		Connect("R29-2")
 	)
-	Net("unnamed_net19" "(unknown)")
+	Net("unnamed_net18" "(unknown)")
 	(
 		Connect("LED4-2")
 		Connect("R25-7")
 	)
-	Net("unnamed_net20" "(unknown)")
+	Net("unnamed_net19" "(unknown)")
 	(
 		Connect("LED7-2")
 		Connect("R25-6")
 	)
-	Net("unnamed_net21" "(unknown)")
+	Net("unnamed_net20" "(unknown)")
 	(
 		Connect("LED8-2")
 		Connect("R25-5")
 	)
-	Net("unnamed_net22" "(unknown)")
+	Net("unnamed_net21" "(unknown)")
 	(
 		Connect("R40-1")
 		Connect("U4-22")
 	)
-	Net("unnamed_net23" "(unknown)")
+	Net("unnamed_net22" "(unknown)")
 	(
 		Connect("LED6-2")
 		Connect("R26-7")
 	)
-	Net("unnamed_net24" "(unknown)")
+	Net("unnamed_net23" "(unknown)")
 	(
 		Connect("LED1-2")
 		Connect("R26-6")
 	)
-	Net("unnamed_net25" "(unknown)")
+	Net("unnamed_net24" "(unknown)")
 	(
 		Connect("LED2-2")
 		Connect("R26-5")
 	)
-	Net("unnamed_net26" "(unknown)")
+	Net("unnamed_net25" "(unknown)")
 	(
 		Connect("LED5-2")
 		Connect("R26-8")
 	)
-	Net("unnamed_net27" "(unknown)")
+	Net("unnamed_net26" "(unknown)")
 	(
 		Connect("LED3-2")
 		Connect("R25-8")
 	)
-	Net("unnamed_net28" "(unknown)")
+	Net("unnamed_net27" "(unknown)")
 	(
 		Connect("LED11-2")
 		Connect("R27-7")
 	)
-	Net("unnamed_net29" "(unknown)")
+	Net("unnamed_net28" "(unknown)")
 	(
 		Connect("LED10-2")
 		Connect("R27-6")
 	)
-	Net("unnamed_net30" "(unknown)")
+	Net("unnamed_net29" "(unknown)")
 	(
 		Connect("LED9-2")
 		Connect("R27-5")
 	)
-	Net("unnamed_net31" "(unknown)")
+	Net("unnamed_net30" "(unknown)")
 	(
 		Connect("LED12-2")
 		Connect("R27-8")
 	)
-	Net("unnamed_net32" "(unknown)")
+	Net("unnamed_net31" "(unknown)")
 	(
 		Connect("R3-2")
 		Connect("U5-1")
 	)
-	Net("unnamed_net33" "(unknown)")
+	Net("unnamed_net32" "(unknown)")
 	(
 		Connect("HEAT_SS-1")
 		Connect("U5-4")
 	)
-	Net("unnamed_net34" "(unknown)")
+	Net("unnamed_net33" "(unknown)")
 	(
 		Connect("HEAT_SS-2")
 		Connect("U5-6")
