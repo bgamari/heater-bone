@@ -1553,3 +1553,5 @@ netname=HEATER_EN_SS
 }
 T 50300 39100 9 12 1 0 0 0 1
 Address = 0x57
+T 63200 31400 9 12 1 0 0 0 1
+Address = 0x20
