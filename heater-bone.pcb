@@ -1240,7 +1240,7 @@ Element["onsolder" "0603" "C5" "100n" 2400.00mil 82.2850mm 0.7300mm -75.00mil 3 
 
 	)
 
-Element["" "JUMPER2" "HEAT" "unknown" 2025.00mil 675.00mil 125.00mil 50.00mil 0 100 ""]
+Element["" "JUMPER2" "HEAT" "unknown" 2000.00mil 675.00mil 125.00mil 50.00mil 0 100 ""]
 (
 	Pin[0.0000 0.0000 60.00mil 30.00mil 66.00mil 38.00mil "1" "1" "square,edge2"]
 	Pin[-100.00mil 0.0000 60.00mil 30.00mil 66.00mil 38.00mil "2" "2" "edge2"]
@@ -2137,9 +2137,9 @@ Layer(1 "top")
 	Line[46.5300mm 27.3300mm 46.5300mm 28.4000mm 25.00mil 20.00mil "clearline"]
 	Line[46.5300mm 28.4000mm 1825.00mil 1125.00mil 25.00mil 20.00mil "clearline"]
 	Line[1950.00mil 825.00mil 1950.00mil 750.00mil 25.00mil 20.00mil "clearline"]
-	Line[1950.00mil 750.00mil 2025.00mil 675.00mil 25.00mil 20.00mil "clearline"]
+	Line[1950.00mil 750.00mil 2000.00mil 675.00mil 25.00mil 20.00mil "clearline"]
 	Line[46.5300mm 19.9300mm 46.5300mm 19.5100mm 25.00mil 20.00mil "clearline"]
-	Line[46.5300mm 19.5100mm 1925.00mil 675.00mil 25.00mil 20.00mil "clearline"]
+	Line[46.5300mm 19.5100mm 1900.00mil 675.00mil 25.00mil 20.00mil "clearline"]
 	Line[400.00mil 3100.00mil 350.00mil 3050.00mil 10.00mil 20.00mil "clearline"]
 	Line[350.00mil 3050.00mil 350.00mil 2975.00mil 10.00mil 20.00mil "clearline"]
 	Line[350.00mil 2975.00mil 325.00mil 2950.00mil 10.00mil 20.00mil "clearline"]
