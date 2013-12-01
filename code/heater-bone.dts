@@ -1,0 +1,258 @@
+/*
+ * Copyright (C) 2013 Matt Ranostay <mranostay@gmail.com>
+ * 
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License version
+ * 2 as published by the Free Software Foundation.
+ */
+
+/dts-v1/;
+/plugin/;
+
+/ {
+        compatible = "ti,beaglebone", "ti,beaglebone-black";
+        /* identification */
+        part-number = "BB-BONE-HEATER";
+        version = "00A0";
+
+        /* state the resources this cape uses */
+        exclusive-use =
+                /* the pin header uses */
+                "P8.3",  /* BTN4:      GPIO1.6    */
+                "P8.4",  /* BTN3:      GPIO1.7    */
+                "P8.5",  /* BTN2:      GPIO1.2    */
+                "P8.6",  /* BTN1:      GPIO1.3    */
+
+                "P8.12", /* HEATER_EN: GPIO1.12   */
+
+                "P8.15", /* ENC_SW:    GPIO1.15   */
+                "P8.16", /* ENC_A:     GPIO1.14   */
+                "P8.17", /* ENC_B:     GPIO0.27   */
+
+                "P8.21", /* LCD_D6:    GPIO1.30   */
+                "P8.22", /* LCD_D7:    GPIO1.5    */
+                "P8.23", /* LCD_D4:    GPIO1.4    */
+                "P8.24", /* LCD_D5:    GPIO1.1    */
+                "P8.25", /* LCD_D2:    GPIO1.0    */
+                "P8.26", /* LCD_D3:    GPIO1.29   */
+                "P8.27", /* LCD_D0:    GPIO2.22   */
+                "P8.28", /* LCD_D1:    GPIO2.24   */
+                "P8.29", /* LCD_RS:    GPIO2.23   */
+                "P8.30", /* LCD_E:     GPIO2.25   */
+
+                "P8.31", /* XBEE_CTSn: UART5_CTSn */
+                "P8.32", /* XBEE_RTSn: UART5_RTSn */
+                "P8.37", /* XBEE_TxD:  UART5_TxD  */
+                "P8.38", /* XBEE_RxD:  UART5_RxD  */
+                "P8.39", /* XBEE_RESETn: GPIO2.12 */
+                "P8.40", /* XBEE_SLEEP:  GPIO2.13 */
+                "P8.42", /* XBEE_PWR:  GPIO2.11   */
+
+                "P9.15", /* LEDS_ENn:  GPIO1.16   */
+
+                "P9.19", /* SCL:       I2C2_SCL   */
+                "P9.20", /* SDA:       I2C2_SDA   */
+
+                "P9.23", /* ADC_INT:   GPIO1.17   */
+                "P9.28", /* ADC_CSn:   SPI1_CS0   */
+
+                "P9.42", /* NRF_CSn:   SPI1_CS1   */
+                "P9.25", /* NRF_CE:    GPIO3.21   */
+                "P9.27", /* NRF_IRQ:   GPIO3.19   */
+
+                "P9.29", /* SPI1_MOSI: SPI1_D0    */
+                "P9.30", /* SPI1_MISO: SPI1_D1    */
+                "P9.31", /* SPI1_SCLK: SPI1_SCLK  */
+
+                /* the hardware IP uses */
+                "uart5",
+                "spi1";
+
+        fragment@0 {
+                target = <&am33xx_pinmux>;
+                __overlay__ {
+                        /* configure UART5 */
+                        uart5_pins: pinmux_uart5_pins {
+                                pinctrl-single,pins = <
+                                        0xc4 0x24  /* lcd_data9.uart4_rxd | MODE4 */
+                                        0xc0 0x04  /* lcd_data9.uart4_txd | MODE4 */
+                                >;
+                        };
+                };
+        };
+
+        fragment@1 {
+                target = <&uart6>; /* really uart5 */
+                __overlay__ {
+                        status = "okay";
+                        pinctrl-names = "default";
+                        pinctrl-0 = <&uart5_pins>;
+                };
+        };
+
+        fragment@2 {
+                target = <&i2c2>;
+                __overlay__ {
+                        status = "okay";
+                        pca: pca@41 {
+                             compatible = "nxp,pca9685-pwm";
+                             #pwm-cells = <2>;
+                             reg = <0x41>;
+                             invert;
+                             open-drain;
+                        };
+                };
+
+                lcd_backlight {pwms = <&pwm 0 5000000>;};
+
+                red_led       {pwms = <&pwm 14 5000000>;};
+                green_led     {pwms = <&pwm 13 5000000>;};
+                blue_led      {pwms = <&pwm 12 5000000>;};
+
+                led1          {pwms = <&pwm 10 5000000>;};
+                led2          {pwms = <&pwm 11 5000000>;};
+                led3          {pwms = <&pwm 4  5000000>;};
+                led4          {pwms = <&pwm 5  5000000>;};
+                led5          {pwms = <&pwm 8  5000000>;};
+                led6          {pwms = <&pwm 9  5000000>;};
+                led7          {pwms = <&pwm 6  5000000>;};
+                led8          {pwms = <&pwm 7  5000000>;};
+                led9          {pwms = <&pwm 0  5000000>;};
+                led10         {pwms = <&pwm 1  5000000>;};
+                led11         {pwms = <&pwm 2  5000000>;};
+                led12         {pwms = <&pwm 3  5000000>;};
+        };
+
+        fragment@3 {
+                target = <&ocp>;
+                __overlay__ {
+                        gpio_keys {
+                                compatible = "gpio-keys";
+                                #address-cells = <1>;
+                                #size-cells = <0>;
+                                
+                                autorepeat;
+                                button@1 {
+                                        label = "down";
+                                        linux,code = <103>;
+                                        gpios = <&gpio2 3 0x00>;
+                                };
+
+                                button@2 {
+                                        label = "left";
+                                        linux,code = <104>;
+                                        gpios = <&gpio2 2 0x00>;
+                                };
+
+                                button@3 {
+                                        label = "right";
+                                        linux,code = <104>;
+                                        gpios = <&gpio2 7 0x00>;
+                                };
+
+                                button@4 {
+                                        label = "up";
+                                        linux,code = <104>;
+                                        gpios = <&gpio2 6 0x00>;
+                                };
+
+                                button@5 {
+                                        label = "enter";
+                                        linux,code = <104>;
+                                        gpios = <&gpio2 15 0x00>;
+                                };
+
+                                rotary@0 {
+                                        compatible = "rotary-encoder";
+                                        gpios = <&gpio2 14 0>, <&gpio1 27 0>; 
+                                        linux,axis = <0>; /* REL_X */
+                                        rotary-encoder,relative-axis;
+                                };
+                        };
+                };
+        };
+
+        fragment@4 {
+                target = <&ocp>;
+                __overlay__ {
+                        gpio_helper {
+                                compatible = "gpio-of-helper";
+                                status = "okay";
+                                pinctrl-names = "default";
+                                pinctrl-0 = <&gpio_helper_pins>;
+
+                                heater_enable {
+                                        gpio-name = "heater_enable";
+                                        gpio = <&gpio2 12 0x00>;
+                                        input;
+                                };
+
+                                lcd_d6 {
+                                        gpio-name = "lcd_d6";
+                                        gpio = <&gpio2 30 0x00>;
+                                        output;
+                                };
+
+                                lcd_d7 {
+                                        gpio-name = "lcd_d7";
+                                        gpio = <&gpio2 5  0x00>;
+                                        output;
+                                };
+
+                                lcd_d4 {
+                                        gpio-name = "lcd_d4";
+                                        gpio = <&gpio2 4  0x00>;
+                                        output;
+                                };
+                                
+                                lcd_d5 {
+                                        gpio-name = "lcd_d5";
+                                        gpio = <&gpio2 1  0x00>;
+                                        output;
+                                };
+
+                                lcd_d2 {
+                                        gpio-name = "lcd_d2";
+                                        gpio = <&gpio2 0  0x00>;
+                                        output;
+                                };
+
+                                lcd_d3 {
+                                        gpio-name = "lcd_d3";
+                                        gpio = <&gpio2 29 0x00>;
+                                        output;
+                                };
+
+                                lcd_d0 {
+                                        gpio-name = "lcd_d0";
+                                        gpio = <&gpio3 22 0x00>;
+                                        output;
+                                };
+
+                                lcd_d1 {
+                                        gpio-name = "lcd_d1";
+                                        gpio = <&gpio3 24 0x00>;
+                                        output;
+                                };
+
+                                lcd_rs {
+                                        gpio-name = "lcd_rs";
+                                        gpio = <&gpio3 23 0x00>;
+                                        output;
+                                };
+
+                                lcd_e  {
+                                        gpio-name = "lcd_e";
+                                        gpio = <&gpio3 25 0x00>;
+                                        output;
+                                };
+                                
+                                xbee_reset {
+                                        gpio-name = "xbee_reset";
+                                        gpio = <&gpio3 12 0x00>;
+                                        output;
+                                };
+                        };                                       
+                };
+        };
+};
