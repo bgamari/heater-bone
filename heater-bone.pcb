@@ -2317,7 +2317,6 @@ Layer(2 "bottom")
 	Line[486.00mil 369.00mil 486.00mil 412.00mil 10.00mil 20.00mil "clearline"]
 	Line[7.3550mm 500.00mil 225.00mil 500.00mil 10.00mil 20.00mil "clearline"]
 	Line[160.00mil 2040.00mil 140.00mil 2060.00mil 10.00mil 20.00mil "clearline"]
-	Line[450.00mil 2350.00mil 400.00mil 2400.00mil 10.00mil 20.00mil "clearline"]
 	Line[140.00mil 2060.00mil 140.00mil 2140.00mil 10.00mil 20.00mil "clearline"]
 	Line[140.00mil 2140.00mil 200.00mil 2200.00mil 10.00mil 20.00mil "clearline"]
 	Line[200.00mil 2200.00mil 200.00mil 2300.00mil 10.00mil 20.00mil "clearline"]
@@ -2332,14 +2331,7 @@ Layer(2 "bottom")
 	Line[150.00mil 2525.00mil 175.00mil 2550.00mil 10.00mil 20.00mil "clearline"]
 	Line[175.00mil 2550.00mil 250.00mil 2550.00mil 10.00mil 20.00mil "clearline"]
 	Line[250.00mil 2550.00mil 300.00mil 2500.00mil 10.00mil 20.00mil "clearline"]
-	Line[200.00mil 2500.00mil 250.00mil 2450.00mil 10.00mil 20.00mil "clearline"]
-	Line[250.00mil 2450.00mil 250.00mil 2350.00mil 10.00mil 20.00mil "clearline"]
-	Line[250.00mil 2350.00mil 300.00mil 2300.00mil 10.00mil 20.00mil "clearline"]
-	Line[350.00mil 2450.00mil 350.00mil 2275.00mil 10.00mil 20.00mil "clearline"]
-	Line[350.00mil 2275.00mil 325.00mil 2250.00mil 10.00mil 20.00mil "clearline"]
-	Line[325.00mil 2250.00mil 250.00mil 2250.00mil 10.00mil 20.00mil "clearline"]
-	Line[250.00mil 2250.00mil 200.00mil 2300.00mil 10.00mil 20.00mil "clearline"]
-	Line[350.00mil 2450.00mil 400.00mil 2500.00mil 10.00mil 20.00mil "clearline"]
+	Line[350.00mil 2425.00mil 400.00mil 2475.00mil 10.00mil 20.00mil "clearline"]
 	Line[120.00mil 1995.00mil 120.00mil 2030.00mil 10.00mil 20.00mil "clearline"]
 	Line[120.00mil 2030.00mil 75.00mil 2075.00mil 10.00mil 20.00mil "clearline"]
 	Line[75.00mil 2075.00mil 75.00mil 2150.00mil 10.00mil 20.00mil "clearline"]
@@ -2440,11 +2432,6 @@ Layer(2 "bottom")
 	Line[475.00mil 2400.00mil 511.60mil 2436.60mil 10.00mil 20.00mil "clearline"]
 	Line[511.60mil 2436.60mil 615.00mil 2436.60mil 10.00mil 20.00mil "clearline"]
 	Line[325.00mil 2150.00mil 350.00mil 2175.00mil 10.00mil 20.00mil "clearline"]
-	Line[350.00mil 2175.00mil 350.00mil 2225.00mil 10.00mil 20.00mil "clearline"]
-	Line[350.00mil 2225.00mil 375.00mil 2250.00mil 10.00mil 20.00mil "clearline"]
-	Line[375.00mil 2250.00mil 425.00mil 2250.00mil 10.00mil 20.00mil "clearline"]
-	Line[425.00mil 2250.00mil 450.00mil 2275.00mil 10.00mil 20.00mil "clearline"]
-	Line[450.00mil 2350.00mil 450.00mil 2275.00mil 10.00mil 20.00mil "clearline"]
 	Line[325.00mil 2150.00mil 275.00mil 2150.00mil 10.00mil 20.00mil "clearline"]
 	Line[275.00mil 2050.00mil 325.00mil 2050.00mil 10.00mil 20.00mil "clearline"]
 	Line[325.00mil 2050.00mil 350.00mil 2075.00mil 10.00mil 20.00mil "clearline"]
@@ -2736,6 +2723,25 @@ Layer(2 "bottom")
 	Line[2325.00mil 2050.00mil 2475.00mil 2200.00mil 10.00mil 20.00mil "clearline"]
 	Line[2200.00mil 2025.00mil 2250.00mil 2075.00mil 10.00mil 20.00mil "clearline"]
 	Line[2250.00mil 2075.00mil 2250.00mil 2225.00mil 10.00mil 20.00mil "clearline"]
+	Line[400.00mil 2475.00mil 400.00mil 2500.00mil 10.00mil 20.00mil "clearline"]
+	Line[200.00mil 2300.00mil 250.00mil 2350.00mil 10.00mil 20.00mil "clearline"]
+	Line[250.00mil 2350.00mil 325.00mil 2350.00mil 10.00mil 20.00mil "clearline"]
+	Line[325.00mil 2350.00mil 350.00mil 2375.00mil 10.00mil 20.00mil "clearline"]
+	Line[350.00mil 2375.00mil 350.00mil 2425.00mil 10.00mil 20.00mil "clearline"]
+	Line[200.00mil 2500.00mil 250.00mil 2450.00mil 10.00mil 20.00mil "clearline"]
+	Line[250.00mil 2450.00mil 325.00mil 2450.00mil 10.00mil 20.00mil "clearline"]
+	Line[325.00mil 2450.00mil 350.00mil 2475.00mil 10.00mil 20.00mil "clearline"]
+	Line[350.00mil 2475.00mil 350.00mil 2525.00mil 10.00mil 20.00mil "clearline"]
+	Line[350.00mil 2525.00mil 375.00mil 2550.00mil 10.00mil 20.00mil "clearline"]
+	Line[375.00mil 2550.00mil 425.00mil 2550.00mil 10.00mil 20.00mil "clearline"]
+	Line[425.00mil 2550.00mil 450.00mil 2525.00mil 10.00mil 20.00mil "clearline"]
+	Line[450.00mil 2525.00mil 450.00mil 2400.00mil 10.00mil 20.00mil "clearline"]
+	Line[350.00mil 2225.00mil 350.00mil 2325.00mil 10.00mil 20.00mil "clearline"]
+	Line[350.00mil 2175.00mil 350.00mil 2325.00mil 10.00mil 20.00mil "clearline"]
+	Line[350.00mil 2325.00mil 400.00mil 2375.00mil 10.00mil 20.00mil "clearline"]
+	Line[400.00mil 2375.00mil 400.00mil 2400.00mil 10.00mil 20.00mil "clearline"]
+	Line[400.00mil 2300.00mil 450.00mil 2350.00mil 10.00mil 20.00mil "clearline"]
+	Line[450.00mil 2350.00mil 450.00mil 2400.00mil 10.00mil 20.00mil "clearline"]
 )
 Layer(3 "ground")
 (
@@ -3176,7 +3182,7 @@ NetList()
 	Net("NRF_CE" "(unknown)")
 	(
 		Connect("NRF24-3")
-		Connect("P9-25")
+		Connect("P9-26")
 	)
 	Net("NRF_IRQ" "(unknown)")
 	(
@@ -3246,29 +3252,33 @@ NetList()
 	)
 	Net("unnamed_net11" "(unknown)")
 	(
+		Connect("P9-25")
+	)
+	Net("unnamed_net12" "(unknown)")
+	(
 		Connect("C9-2")
 		Connect("Q2-2")
 		Connect("U3-7")
 	)
-	Net("unnamed_net12" "(unknown)")
+	Net("unnamed_net13" "(unknown)")
 	(
 		Connect("C9-1")
 		Connect("Q2-1")
 		Connect("Q2-3")
 		Connect("U3-8")
 	)
-	Net("unnamed_net13" "(unknown)")
+	Net("unnamed_net14" "(unknown)")
 	(
 		Connect("R10-2")
 		Connect("R12-2")
 		Connect("U3-9")
 	)
-	Net("unnamed_net14" "(unknown)")
+	Net("unnamed_net15" "(unknown)")
 	(
 		Connect("LCD-3")
 		Connect("V0-1")
 	)
-	Net("unnamed_net15" "(unknown)")
+	Net("unnamed_net16" "(unknown)")
 	(
 		Connect("C7-2")
 		Connect("LED_XBEE-1")
@@ -3276,143 +3286,143 @@ NetList()
 		Connect("U2-4")
 		Connect("XBEE-1")
 	)
-	Net("unnamed_net16" "(unknown)")
+	Net("unnamed_net17" "(unknown)")
 	(
 		Connect("D1-1")
 		Connect("Q1-3")
 		Connect("RELAY-1")
 	)
-	Net("unnamed_net17" "(unknown)")
+	Net("unnamed_net18" "(unknown)")
 	(
 		Connect("HEAT-1")
 		Connect("RELAY-6")
 	)
-	Net("unnamed_net18" "(unknown)")
+	Net("unnamed_net19" "(unknown)")
 	(
 		Connect("HEAT-2")
 		Connect("RELAY-5")
 	)
-	Net("unnamed_net19" "(unknown)")
+	Net("unnamed_net20" "(unknown)")
 	(
 		Connect("R22-2")
 		Connect("RGB_LED-3")
 	)
-	Net("unnamed_net20" "(unknown)")
+	Net("unnamed_net21" "(unknown)")
 	(
 		Connect("R22-1")
 		Connect("U4-19")
 	)
-	Net("unnamed_net21" "(unknown)")
+	Net("unnamed_net22" "(unknown)")
 	(
 		Connect("R23-2")
 		Connect("RGB_LED-4")
 	)
-	Net("unnamed_net22" "(unknown)")
+	Net("unnamed_net23" "(unknown)")
 	(
 		Connect("R23-1")
 		Connect("U4-20")
 	)
-	Net("unnamed_net23" "(unknown)")
+	Net("unnamed_net24" "(unknown)")
 	(
 		Connect("R24-2")
 		Connect("RGB_LED-1")
 	)
-	Net("unnamed_net24" "(unknown)")
+	Net("unnamed_net25" "(unknown)")
 	(
 		Connect("R24-1")
 		Connect("U4-21")
 	)
-	Net("unnamed_net25" "(unknown)")
+	Net("unnamed_net26" "(unknown)")
 	(
 		Connect("Q1-1")
 		Connect("R21-2")
 	)
-	Net("unnamed_net26" "(unknown)")
+	Net("unnamed_net27" "(unknown)")
 	(
 		Connect("C6-2")
 		Connect("U2-6")
 	)
-	Net("unnamed_net27" "(unknown)")
+	Net("unnamed_net28" "(unknown)")
 	(
 		Connect("LED_XBEE-2")
 		Connect("R29-2")
 	)
-	Net("unnamed_net28" "(unknown)")
+	Net("unnamed_net29" "(unknown)")
 	(
 		Connect("LED4-2")
 		Connect("R25-7")
 	)
-	Net("unnamed_net29" "(unknown)")
+	Net("unnamed_net30" "(unknown)")
 	(
 		Connect("LED7-2")
 		Connect("R25-6")
 	)
-	Net("unnamed_net30" "(unknown)")
+	Net("unnamed_net31" "(unknown)")
 	(
 		Connect("LED8-2")
 		Connect("R25-5")
 	)
-	Net("unnamed_net31" "(unknown)")
+	Net("unnamed_net32" "(unknown)")
 	(
 		Connect("R40-1")
 		Connect("U4-22")
 	)
-	Net("unnamed_net32" "(unknown)")
+	Net("unnamed_net33" "(unknown)")
 	(
 		Connect("LED6-2")
 		Connect("R26-7")
 	)
-	Net("unnamed_net33" "(unknown)")
+	Net("unnamed_net34" "(unknown)")
 	(
 		Connect("LED1-2")
 		Connect("R26-6")
 	)
-	Net("unnamed_net34" "(unknown)")
+	Net("unnamed_net35" "(unknown)")
 	(
 		Connect("LED2-2")
 		Connect("R26-5")
 	)
-	Net("unnamed_net35" "(unknown)")
+	Net("unnamed_net36" "(unknown)")
 	(
 		Connect("LED5-2")
 		Connect("R26-8")
 	)
-	Net("unnamed_net36" "(unknown)")
+	Net("unnamed_net37" "(unknown)")
 	(
 		Connect("LED3-2")
 		Connect("R25-8")
 	)
-	Net("unnamed_net37" "(unknown)")
+	Net("unnamed_net38" "(unknown)")
 	(
 		Connect("LED11-2")
 		Connect("R27-7")
 	)
-	Net("unnamed_net38" "(unknown)")
+	Net("unnamed_net39" "(unknown)")
 	(
 		Connect("LED10-2")
 		Connect("R27-6")
 	)
-	Net("unnamed_net39" "(unknown)")
+	Net("unnamed_net40" "(unknown)")
 	(
 		Connect("LED9-2")
 		Connect("R27-5")
 	)
-	Net("unnamed_net40" "(unknown)")
+	Net("unnamed_net41" "(unknown)")
 	(
 		Connect("LED12-2")
 		Connect("R27-8")
 	)
-	Net("unnamed_net41" "(unknown)")
+	Net("unnamed_net42" "(unknown)")
 	(
 		Connect("R3-2")
 		Connect("U5-1")
 	)
-	Net("unnamed_net42" "(unknown)")
+	Net("unnamed_net43" "(unknown)")
 	(
 		Connect("HEAT_SS-1")
 		Connect("U5-4")
 	)
-	Net("unnamed_net43" "(unknown)")
+	Net("unnamed_net44" "(unknown)")
 	(
 		Connect("HEAT_SS-2")
 		Connect("U5-6")
