@@ -74,7 +74,7 @@
                 __overlay__ {
                         gpio_helper_pins: pinmux_gpio_helper_pins {
                                 pinctrl-single,pins = <
-					/* configure UART5 */
+                                        /* configure UART5 */
                                         0xc4 0x24  /* lcd_data9.uart4_rxd | MODE4 */
                                         0xc0 0x04  /* lcd_data9.uart4_txd | MODE4 */
                                 >;
@@ -94,38 +94,38 @@
                             open-drain;
                         };
 
-			pwmleds@1 {
-			    compatible = "pwm-leds";
+                        pwmleds@1 {
+                            compatible = "pwm-leds";
 
-			    lcd_backlight {
-				label = "lcd:backlight";
-			        pwms = <&pwm 0 5000000>;
-			    };
+                            lcd_backlight {
+                                label = "lcd:backlight";
+                                pwms = <&pwm 0 5000000>;
+                            };
                             red {
                                 label = "rgb:red";
-			        pwms = <&pwm 14 5000000>;
+                                pwms = <&pwm 14 5000000>;
                             };
-			    green {
+                            green {
                                 label = "rgb:green";
                                 pwms = <&pwm 13 5000000>;
                             };
-			    blue {
+                            blue {
                                 label = "rgb:blue";
                                 pwms = <&pwm 12 5000000>;
                             };
 
-			    led1  {pwms = <&pwm 10 5000000>;};
-			    led2  {pwms = <&pwm 11 5000000>;};
-			    led3  {pwms = <&pwm 4  5000000>;};
-			    led4  {pwms = <&pwm 5  5000000>;};
-			    led5  {pwms = <&pwm 8  5000000>;};
-			    led6  {pwms = <&pwm 9  5000000>;};
-			    led7  {pwms = <&pwm 6  5000000>;};
-			    led8  {pwms = <&pwm 7  5000000>;};
-			    led9  {pwms = <&pwm 0  5000000>;};
-			    led10 {pwms = <&pwm 1  5000000>;};
-			    led11 {pwms = <&pwm 2  5000000>;};
-			    led12 {pwms = <&pwm 3  5000000>;};
+                            led1  {pwms = <&pwm 10 5000000>;};
+                            led2  {pwms = <&pwm 11 5000000>;};
+                            led3  {pwms = <&pwm 4  5000000>;};
+                            led4  {pwms = <&pwm 5  5000000>;};
+                            led5  {pwms = <&pwm 8  5000000>;};
+                            led6  {pwms = <&pwm 9  5000000>;};
+                            led7  {pwms = <&pwm 6  5000000>;};
+                            led8  {pwms = <&pwm 7  5000000>;};
+                            led9  {pwms = <&pwm 0  5000000>;};
+                            led10 {pwms = <&pwm 1  5000000>;};
+                            led11 {pwms = <&pwm 2  5000000>;};
+                            led12 {pwms = <&pwm 3  5000000>;};
                         };
                 };
         };
