@@ -58,7 +58,7 @@
                 "P9.28", /* ADC_CSn:   SPI1_CS0   */
 
                 "P9.42", /* NRF_CSn:   SPI1_CS1   */
-                "P9.25", /* NRF_CE:    GPIO3.21   */
+                "P9.26", /* NRF_CE:    GPIO?      */
                 "P9.27", /* NRF_IRQ:   GPIO3.19   */
 
                 "P9.29", /* SPI1_MOSI: SPI1_D0    */
