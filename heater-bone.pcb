@@ -2426,20 +2426,8 @@ Layer(2 "bottom")
 	Line[552.20mil 2487.80mil 450.00mil 2590.00mil 10.00mil 20.00mil "clearline"]
 	Line[400.00mil 2000.00mil 13.0700mm 2000.00mil 10.00mil 20.00mil "clearline"]
 	Line[275.00mil 2150.00mil 200.00mil 2075.00mil 10.00mil 20.00mil "clearline"]
-	Line[300.00mil 1800.00mil 250.00mil 1850.00mil 10.00mil 20.00mil "clearline"]
-	Line[250.00mil 1850.00mil 250.00mil 2025.00mil 10.00mil 20.00mil "clearline"]
-	Line[250.00mil 2025.00mil 275.00mil 2050.00mil 10.00mil 20.00mil "clearline"]
-	Line[475.00mil 2400.00mil 511.60mil 2436.60mil 10.00mil 20.00mil "clearline"]
-	Line[511.60mil 2436.60mil 615.00mil 2436.60mil 10.00mil 20.00mil "clearline"]
 	Line[325.00mil 2150.00mil 350.00mil 2175.00mil 10.00mil 20.00mil "clearline"]
 	Line[325.00mil 2150.00mil 275.00mil 2150.00mil 10.00mil 20.00mil "clearline"]
-	Line[275.00mil 2050.00mil 325.00mil 2050.00mil 10.00mil 20.00mil "clearline"]
-	Line[325.00mil 2050.00mil 350.00mil 2075.00mil 10.00mil 20.00mil "clearline"]
-	Line[350.00mil 2075.00mil 350.00mil 2125.00mil 10.00mil 20.00mil "clearline"]
-	Line[350.00mil 2125.00mil 375.00mil 2150.00mil 10.00mil 20.00mil "clearline"]
-	Line[375.00mil 2150.00mil 425.00mil 2150.00mil 10.00mil 20.00mil "clearline"]
-	Line[425.00mil 2150.00mil 475.00mil 2200.00mil 10.00mil 20.00mil "clearline"]
-	Line[475.00mil 2200.00mil 475.00mil 2400.00mil 10.00mil 20.00mil "clearline"]
 	Line[300.00mil 2000.00mil 350.00mil 2050.00mil 10.00mil 20.00mil "clearline"]
 	Line[350.00mil 2050.00mil 425.00mil 2050.00mil 10.00mil 20.00mil "clearline"]
 	Line[425.00mil 2050.00mil 450.00mil 2075.00mil 10.00mil 20.00mil "clearline"]
@@ -2742,6 +2730,8 @@ Layer(2 "bottom")
 	Line[400.00mil 2375.00mil 400.00mil 2400.00mil 10.00mil 20.00mil "clearline"]
 	Line[400.00mil 2300.00mil 450.00mil 2350.00mil 10.00mil 20.00mil "clearline"]
 	Line[450.00mil 2350.00mil 450.00mil 2400.00mil 10.00mil 20.00mil "clearline"]
+	Line[615.00mil 2436.60mil 663.40mil 2436.60mil 10.00mil 20.00mil "clearline"]
+	Line[663.40mil 2436.60mil 700.00mil 2400.00mil 10.00mil 20.00mil "clearline"]
 )
 Layer(3 "ground")
 (
@@ -2896,11 +2886,6 @@ NetList()
 		Connect("RELAY-8")
 		Connect("U2-2")
 	)
-	Net("\\_LEDS_EN\\_" "(unknown)")
-	(
-		Connect("P9-15")
-		Connect("U4-23")
-	)
 	Net("ADC_\\_CS\\_" "(unknown)")
 	(
 		Connect("P9-28")
@@ -3028,6 +3013,7 @@ NetList()
 		Connect("U4-4")
 		Connect("U4-5")
 		Connect("U4-14")
+		Connect("U4-23")
 		Connect("U4-24")
 		Connect("U4-25")
 		Connect("U5-2")
