@@ -82,50 +82,62 @@
                 };
         };
 
-        fragment@2 {
+        fragment@1 {
                 target = <&i2c2>;
                 __overlay__ {
                         status = "okay";
-                        pwm: pca@41 {
+                        pwm: pca@40 {
                             compatible = "nxp,pca9685-pwm";
                             #pwm-cells = <2>;
-                            reg = <0x41>;
+                            reg = <0x40>;
                             invert;
                             open-drain;
                         };
+		};
+	};
 
-                        pwmleds@1 {
+	fragment@2 {
+		target = <&ocp>;
+		__overlay__ {
+			status = "okay";
+                        pwmleds {
                             compatible = "pwm-leds";
 
+			/*
                             lcd_backlight {
+                                pwms = <&pwm 0 16000000>;
                                 label = "lcd:backlight";
-                                pwms = <&pwm 0 5000000>;
+				max-brightness = <4095>;
                             };
+			 */
                             red {
+                                pwms = <&pwm 14 16000000>;
                                 label = "rgb:red";
-                                pwms = <&pwm 14 5000000>;
+				max-brightness = <4095>;
                             };
                             green {
+                                pwms = <&pwm 13 16000000>;
                                 label = "rgb:green";
-                                pwms = <&pwm 13 5000000>;
+				max-brightness = <4095>;
                             };
                             blue {
+                                pwms = <&pwm 12 16000000>;
                                 label = "rgb:blue";
-                                pwms = <&pwm 12 5000000>;
+				max-brightness = <4095>;
                             };
 
-                            led1  {pwms = <&pwm 10 5000000>;};
-                            led2  {pwms = <&pwm 11 5000000>;};
-                            led3  {pwms = <&pwm 4  5000000>;};
-                            led4  {pwms = <&pwm 5  5000000>;};
-                            led5  {pwms = <&pwm 8  5000000>;};
-                            led6  {pwms = <&pwm 9  5000000>;};
-                            led7  {pwms = <&pwm 6  5000000>;};
-                            led8  {pwms = <&pwm 7  5000000>;};
-                            led9  {pwms = <&pwm 0  5000000>;};
-                            led10 {pwms = <&pwm 1  5000000>;};
-                            led11 {pwms = <&pwm 2  5000000>;};
-                            led12 {pwms = <&pwm 3  5000000>;};
+                            led1  {pwms = <&pwm 10 16000000>;};
+                            led2  {pwms = <&pwm 11 16000000>;};
+                            led3  {pwms = <&pwm 4  16000000>;};
+                            led4  {pwms = <&pwm 5  16000000>;};
+                            led5  {pwms = <&pwm 8  16000000>;};
+                            led6  {pwms = <&pwm 9  16000000>;};
+                            led7  {pwms = <&pwm 6  16000000>;};
+                            led8  {pwms = <&pwm 7  16000000>;};
+                            led9  {pwms = <&pwm 0  16000000>;};
+                            led10 {pwms = <&pwm 1  16000000>;};
+                            led11 {pwms = <&pwm 2  16000000>;};
+                            led12 {pwms = <&pwm 3  16000000>;};
                         };
                 };
         };
@@ -191,7 +203,13 @@
                                 heater_enable {
                                         gpio-name = "heater_enable";
                                         gpio = <&gpio2 12 0x00>;
-                                        input;
+                                        output;
+                                };
+
+                                led_enable {
+                                        gpio-name = "led_enable";
+                                        gpio = <&gpio2 16 0x00>;
+                                        output;
                                 };
 
                                 lcd_d6 {
