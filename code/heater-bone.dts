@@ -103,13 +103,11 @@
                         pwmleds {
                             compatible = "pwm-leds";
 
-			/*
                             lcd_backlight {
-                                pwms = <&pwm 0 16000000>;
+                                pwms = <&pwm 15 16000000>;
                                 label = "lcd:backlight";
 				max-brightness = <4095>;
                             };
-			 */
                             red {
                                 pwms = <&pwm 14 16000000>;
                                 label = "rgb:red";
