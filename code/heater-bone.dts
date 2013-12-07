@@ -86,6 +86,7 @@
                 target = <&i2c2>;
                 __overlay__ {
                         status = "okay";
+
                         pwm: pca@40 {
                             compatible = "nxp,pca9685-pwm";
                             #pwm-cells = <2>;
@@ -93,6 +94,13 @@
                             invert;
                             open-drain;
                         };
+
+			adc: adt7411@4b {
+			    compatible = "analog,adt7411";
+			    reg = <0x4b>;
+			    #address-cells = <1>;
+			    #size-cells = <0>;
+			};
 		};
 	};
 
