@@ -207,38 +207,42 @@
                                 autorepeat;
                                 button@1 {
                                         label = "down";
-                                        linux,code = <103>;
-                                        gpios = <&gpio2 3 0x00>;
+                                        linux,code = <108>;
+					autorepeat;
+                                        gpios = <&gpio2 4 0x00>;
                                 };
 
                                 button@2 {
                                         label = "left";
-                                        linux,code = <104>;
-                                        gpios = <&gpio2 2 0x00>;
+                                        linux,code = <105>;
+					autorepeat;
+                                        gpios = <&gpio2 5 0x00>;
                                 };
 
                                 button@3 {
                                         label = "right";
-                                        linux,code = <104>;
-                                        gpios = <&gpio2 7 0x00>;
+                                        linux,code = <106>;
+					autorepeat;
+                                        gpios = <&gpio2 3 0x00>;
                                 };
 
                                 button@4 {
                                         label = "up";
-                                        linux,code = <104>;
-                                        gpios = <&gpio2 6 0x00>;
+                                        linux,code = <103>;
+					autorepeat;
+                                        gpios = <&gpio2 2 0x00>;
                                 };
 
                                 button@5 {
                                         label = "enter";
-                                        linux,code = <104>;
-                                        gpios = <&gpio2 15 0x00>;
+                                        linux,code = <28>;
+                                        gpios = <&gpio0 23 0x00>;
                                 };
                         };
 
                         rotary@0 {
                                 compatible = "rotary-encoder";
-                                gpios = <&gpio2 14 0>, <&gpio1 27 0>; 
+                                gpios = <&gpio1 15 0>, <&gpio0 26 0>; 
                                 linux,axis = <0>; /* REL_X */
                                 rotary-encoder,relative-axis;
                         };
