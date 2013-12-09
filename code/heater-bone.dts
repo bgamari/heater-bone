@@ -95,9 +95,9 @@
                             open-drain;
                         };
 
-			adc: adt7411@4b {
-			    compatible = "analog,adt7411";
-			    reg = <0x4b>;
+			adc: adt7411@96 {
+			    compatible = "adi,adt7411";
+			    reg = <0x96>;
 			    #address-cells = <1>;
 			    #size-cells = <0>;
 			};
