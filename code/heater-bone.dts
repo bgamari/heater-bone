@@ -74,9 +74,73 @@
                 __overlay__ {
                         gpio_helper_pins: pinmux_gpio_helper_pins {
                                 pinctrl-single,pins = <
-                                        /* configure UART5 */
-                                        0xc4 0x24  /* lcd_data9.uart4_rxd | MODE4 */
-                                        0xc0 0x04  /* lcd_data9.uart4_txd | MODE4 */
+                                        // BTN4         = P8_07 = gpio2[2] INPUT
+                                        0x90 0x27
+                                        // BTN3         = P8_08 = gpio2[3] INPUT
+                                        0x94 0x27
+                                        // BTN2         = P8_09 = gpio2[5] INPUT
+                                        0x9c 0x27
+                                        // BTN1         = P8_10 = gpio2[4] INPUT
+                                        0x98 0x27
+                                        // HEATER_EN_SS = P8_11 = gpio1[13]
+                                        0x34 0x07
+                                        // HEATER_EN    = P8_12 = gpio1[12]
+                                        0x30 0x07
+                                        // ENC_SW       = P8_13 = gpio0[23] INPUT
+                                        0x24 0x27
+                                        // ENC_B        = P8_14 = gpio0[26] INPUT
+                                        0x28 0x27
+                                        // ENC_A        = P8_15 = gpio1[15] INPUT
+                                        0x3c 0x27
+                                        // LCD_D7       = P8_16 = gpio1[14]
+                                        0x38 0x07
+                                        // LCD_D5       = P8_17 = gpio0[27]
+                                        0x2c 0x07
+                                        // LCD_D6       = P8_18 = gpio2[1]
+                                        0x8c 0x07
+                                        // LCD_D4       = P8_19 = gpio0[22]
+                                        0x20 0x07
+                                        // LCD_D3       = P8_26 = gpio1[29]
+                                        0x7c 0x07
+                                        // LCD_D1       = P8_27 = gpio2[22]
+                                        0xe0 0x07
+                                        // LCD_D2       = P8_28 = gpio2[24]
+                                        0xe8 0x07
+                                        // LCD_E        = P8_29 = gpio2[23]
+                                        0xe4 0x07
+                                        // LCD_D0       = P8_30 = gpio2[25]
+                                        0xec 0x07
+                                        // XBEE_CTSn    = P8_31 = uart5_ctsn INPUT
+                                        0xd8 0x26
+                                        // XBEE_RTSn    = P8_32 = uart5_rtsn
+                                        0xdc 0x06
+                                        // LCD_RS       = P8_34 = gpio2[17]
+                                        0xcc 0x07
+                                        // XBEE_TXD     = P8_37 = uart5_txd
+                                        0xc0 0x04
+                                        // XBEE_RXD     = P8_38 = uart5_rxd INPUT
+                                        0xc4 0x24
+                                        // XBEE_RESETn  = P8_39 = gpio2[12]
+                                        0xb8 0x07
+                                        // XBEE_SLEEP_RQ = P8_40 = gpio2[13]
+                                        0xbc 0x07
+                                        // XBEE_PWR     = P8_42 = gpio2[10]
+                                        0xb4 0x07
+
+                                        // ADC_INT      = P9_23 = gpio1[17] INPUT
+                                        0x44 0x27
+                                        // NRF_CE       = P9_26 = gpio0[14]
+                                        0x180 0x07
+                                        // NRF_IRQ      = P9_27 = gpio3[19] INPUT
+                                        0x1a4 0x27
+                                        // NRF_CSn      = P9_28 = spi1_cs0
+                                        0x19c 0x03
+                                        // SPI1_MOSI    = P9_29 = spi1_d0
+                                        0x194 0x03
+                                        // SPI1_MISO    = P9_30 = spi1_d1 INPUT
+                                        0x198 0x23
+                                        // SPI1_SCLK    = P9_31 = spi1_sclk INPUT
+                                        0x190 0x23
                                 >;
                         };
                 };
