@@ -55,15 +55,15 @@
                 "P9.20", /* SDA:       I2C2_SDA   */
 
                 "P9.23", /* ADC_INT:   GPIO1.17   */
-                // "P9.28", /* ADC_CSn:   SPI1_CS0   */
 
                 "P9.42", /* NRF_CSn:   SPI1_CS1   */
-                "P9.26", /* NRF_CE:    GPIO?      */
+                "P9.26", /* NRF_CE:    GPIO0.14   */
                 "P9.27", /* NRF_IRQ:   GPIO3.19   */
 
                 //"P9.29", /* SPI1_MOSI: SPI1_D0    */
                 "P9.30", /* SPI1_MISO: SPI1_D1    */
                 //"P9.31", /* SPI1_SCLK: SPI1_SCLK  */
+                "P9.42", /* SPI1_CS1: NRF_CS      */
 
                 /* the hardware IP uses */
                 "uart5",
@@ -110,10 +110,10 @@
                                         0xe4 0x07
                                         // LCD_D0       = P8_30 = gpio2[25]
                                         0xec 0x07
-                                        // XBEE_CTSn    = P8_31 = uart5_ctsn INPUT
-                                        0xd8 0x26
-                                        // XBEE_RTSn    = P8_32 = uart5_rtsn
-                                        0xdc 0x06
+                                        // XBEE_CTSn    = P8_31 = uart5_ctsn
+                                        0xd8 0x06
+                                        // XBEE_RTSn    = P8_32 = uart5_rtsn INPUT
+                                        0xdc 0x26
                                         // LCD_RS       = P8_34 = gpio2[17]
                                         0xcc 0x07
                                         // XBEE_TXD     = P8_37 = uart5_txd
@@ -133,14 +133,14 @@
                                         0x180 0x07
                                         // NRF_IRQ      = P9_27 = gpio3[19] INPUT
                                         0x1a4 0x27
-                                        // NRF_CSn      = P9_28 = spi1_cs0
-                                        0x19c 0x03
                                         // SPI1_MOSI    = P9_29 = spi1_d0
                                         0x194 0x03
                                         // SPI1_MISO    = P9_30 = spi1_d1 INPUT
                                         0x198 0x23
                                         // SPI1_SCLK    = P9_31 = spi1_sclk INPUT
                                         0x190 0x23
+                                        // NRF_CSn      = P9_42 = spi1_cs1
+                                        0x164 0x02
                                 >;
                         };
                 };
