@@ -55,15 +55,15 @@
                 "P9.20", /* SDA:       I2C2_SDA   */
 
                 "P9.23", /* ADC_INT:   GPIO1.17   */
-                // "P9.28", /* ADC_CSn:   SPI1_CS0   */
 
                 "P9.42", /* NRF_CSn:   SPI1_CS1   */
-                "P9.26", /* NRF_CE:    GPIO?      */
+                "P9.26", /* NRF_CE:    GPIO0.14   */
                 "P9.27", /* NRF_IRQ:   GPIO3.19   */
 
                 //"P9.29", /* SPI1_MOSI: SPI1_D0    */
                 "P9.30", /* SPI1_MISO: SPI1_D1    */
                 //"P9.31", /* SPI1_SCLK: SPI1_SCLK  */
+                "P9.42", /* SPI1_CS1: NRF_CS      */
 
                 /* the hardware IP uses */
                 "uart5",
@@ -74,9 +74,73 @@
                 __overlay__ {
                         gpio_helper_pins: pinmux_gpio_helper_pins {
                                 pinctrl-single,pins = <
-                                        /* configure UART5 */
-                                        0xc4 0x24  /* lcd_data9.uart4_rxd | MODE4 */
-                                        0xc0 0x04  /* lcd_data9.uart4_txd | MODE4 */
+                                        // BTN4         = P8_07 = gpio2[2] INPUT
+                                        0x90 0x27
+                                        // BTN3         = P8_08 = gpio2[3] INPUT
+                                        0x94 0x27
+                                        // BTN2         = P8_09 = gpio2[5] INPUT
+                                        0x9c 0x27
+                                        // BTN1         = P8_10 = gpio2[4] INPUT
+                                        0x98 0x27
+                                        // HEATER_EN_SS = P8_11 = gpio1[13]
+                                        0x34 0x07
+                                        // HEATER_EN    = P8_12 = gpio1[12]
+                                        0x30 0x07
+                                        // ENC_SW       = P8_13 = gpio0[23] INPUT
+                                        0x24 0x27
+                                        // ENC_B        = P8_14 = gpio0[26] INPUT
+                                        0x28 0x27
+                                        // ENC_A        = P8_15 = gpio1[15] INPUT
+                                        0x3c 0x27
+                                        // LCD_D7       = P8_16 = gpio1[14]
+                                        0x38 0x07
+                                        // LCD_D5       = P8_17 = gpio0[27]
+                                        0x2c 0x07
+                                        // LCD_D6       = P8_18 = gpio2[1]
+                                        0x8c 0x07
+                                        // LCD_D4       = P8_19 = gpio0[22]
+                                        0x20 0x07
+                                        // LCD_D3       = P8_26 = gpio1[29]
+                                        0x7c 0x07
+                                        // LCD_D1       = P8_27 = gpio2[22]
+                                        0xe0 0x07
+                                        // LCD_D2       = P8_28 = gpio2[24]
+                                        0xe8 0x07
+                                        // LCD_E        = P8_29 = gpio2[23]
+                                        0xe4 0x07
+                                        // LCD_D0       = P8_30 = gpio2[25]
+                                        0xec 0x07
+                                        // XBEE_CTSn    = P8_31 = uart5_ctsn
+                                        0xd8 0x06
+                                        // XBEE_RTSn    = P8_32 = uart5_rtsn INPUT
+                                        0xdc 0x26
+                                        // LCD_RS       = P8_34 = gpio2[17]
+                                        0xcc 0x07
+                                        // XBEE_TXD     = P8_37 = uart5_txd
+                                        0xc0 0x04
+                                        // XBEE_RXD     = P8_38 = uart5_rxd INPUT
+                                        0xc4 0x24
+                                        // XBEE_RESETn  = P8_39 = gpio2[12]
+                                        0xb8 0x07
+                                        // XBEE_SLEEP_RQ = P8_40 = gpio2[13]
+                                        0xbc 0x07
+                                        // XBEE_PWR     = P8_42 = gpio2[10]
+                                        0xb4 0x07
+
+                                        // ADC_INT      = P9_23 = gpio1[17] INPUT
+                                        0x44 0x27
+                                        // NRF_CE       = P9_26 = gpio0[14]
+                                        0x180 0x07
+                                        // NRF_IRQ      = P9_27 = gpio3[19] INPUT
+                                        0x1a4 0x27
+                                        // SPI1_MOSI    = P9_29 = spi1_d0
+                                        0x194 0x03
+                                        // SPI1_MISO    = P9_30 = spi1_d1 INPUT
+                                        0x198 0x23
+                                        // SPI1_SCLK    = P9_31 = spi1_sclk INPUT
+                                        0x190 0x23
+                                        // NRF_CSn      = P9_42 = spi1_cs1
+                                        0x164 0x02
                                 >;
                         };
                 };
@@ -95,103 +159,103 @@
                             open-drain;
                         };
 
-			adc: adt7411@96 {
-			    compatible = "adi,adt7411";
-			    reg = <0x96>;
-			    #address-cells = <1>;
-			    #size-cells = <0>;
-			};
-		};
-	};
+                        adc: adt7411@96 {
+                            compatible = "adi,adt7411";
+                            reg = <0x96>;
+                            #address-cells = <1>;
+                            #size-cells = <0>;
+                        };
+                };
+        };
 
-	fragment@2 {
-		target = <&ocp>;
-		__overlay__ {
-			status = "okay";
+        fragment@2 {
+                target = <&ocp>;
+                __overlay__ {
+                        status = "okay";
                         pwmleds {
                             compatible = "pwm-leds";
 
                             lcd_backlight {
                                 pwms = <&pwm 15 16000000>;
                                 label = "heater:white:lcd";
-				max-brightness = <4095>;
+                                max-brightness = <4095>;
                             };
                             red {
                                 pwms = <&pwm 14 16000000>;
                                 label = "heater:status:red";
-				max-brightness = <4095>;
+                                max-brightness = <4095>;
                             };
                             green {
                                 pwms = <&pwm 13 16000000>;
                                 label = "heater:status:green";
-				max-brightness = <4095>;
+                                max-brightness = <4095>;
                             };
                             blue {
                                 pwms = <&pwm 12 16000000>;
                                 label = "heater:status:blue";
-				max-brightness = <4095>;
+                                max-brightness = <4095>;
                             };
 
                             led1  {
-				pwms = <&pwm 10 16000000>;
-				label = "heater:led1:green";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 10 16000000>;
+                                label = "heater:led1:green";
+                                max-brightness = <4095>;
+                            };
                             led2  {
-				pwms = <&pwm 11 16000000>;
-				label = "heater:led1:red";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 11 16000000>;
+                                label = "heater:led1:red";
+                                max-brightness = <4095>;
+                            };
                             led3  {
-				pwms = <&pwm 4  16000000>;
-				label = "heater:led2:green";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 4  16000000>;
+                                label = "heater:led2:green";
+                                max-brightness = <4095>;
+                            };
                             led4  {
-				pwms = <&pwm 5  16000000>;
-				label = "heater:led2:red";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 5  16000000>;
+                                label = "heater:led2:red";
+                                max-brightness = <4095>;
+                            };
                             led5  {
-				pwms = <&pwm 8  16000000>;
-				label = "heater:led3:green";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 8  16000000>;
+                                label = "heater:led3:green";
+                                max-brightness = <4095>;
+                            };
                             led6  {
-				pwms = <&pwm 9  16000000>;
-				label = "heater:led3:red";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 9  16000000>;
+                                label = "heater:led3:red";
+                                max-brightness = <4095>;
+                            };
                             led7  {
-				pwms = <&pwm 6  16000000>;
-				label = "heater:led4:green";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 6  16000000>;
+                                label = "heater:led4:green";
+                                max-brightness = <4095>;
+                            };
                             led8  {
-				pwms = <&pwm 7  16000000>;
-				label = "heater:led4:red";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 7  16000000>;
+                                label = "heater:led4:red";
+                                max-brightness = <4095>;
+                            };
                             led9  {
-				pwms = <&pwm 0  16000000>;
-				label = "heater:led5:green";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 0  16000000>;
+                                label = "heater:led5:green";
+                                max-brightness = <4095>;
+                            };
                             led10 {
-				pwms = <&pwm 1  16000000>;
-				label = "heater:led5:red";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 1  16000000>;
+                                label = "heater:led5:red";
+                                max-brightness = <4095>;
+                            };
                             led11 {
-				pwms = <&pwm 2  16000000>;
-				label = "heater:led6:green";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 2  16000000>;
+                                label = "heater:led6:green";
+                                max-brightness = <4095>;
+                            };
                             led12 {
-				pwms = <&pwm 3  16000000>;
-				label = "heater:led6:red";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 3  16000000>;
+                                label = "heater:led6:red";
+                                max-brightness = <4095>;
+                            };
                         };
                 };
         };
@@ -203,7 +267,7 @@
                                 compatible = "gpio-keys";
                                 #address-cells = <1>;
                                 #size-cells = <0>;
-                                
+
                                 autorepeat;
                                 button@1 {
                                         label = "down";
@@ -287,7 +351,7 @@
                                         gpio = <&gpio2 4  0x00>;
                                         output;
                                 };
-                                
+
                                 lcd_d5 {
                                         gpio-name = "lcd_d5";
                                         gpio = <&gpio2 1  0x00>;
@@ -329,13 +393,13 @@
                                         gpio = <&gpio3 25 0x00>;
                                         output;
                                 };
-                                
+
                                 xbee_reset {
                                         gpio-name = "xbee_reset";
                                         gpio = <&gpio3 12 0x00>;
                                         output;
                                 };
-                        };                                       
+                        };
                 };
         };
 };
