@@ -159,103 +159,103 @@
                             open-drain;
                         };
 
-			adc: adt7411@96 {
-			    compatible = "adi,adt7411";
-			    reg = <0x96>;
-			    #address-cells = <1>;
-			    #size-cells = <0>;
-			};
-		};
-	};
+                        adc: adt7411@96 {
+                            compatible = "adi,adt7411";
+                            reg = <0x96>;
+                            #address-cells = <1>;
+                            #size-cells = <0>;
+                        };
+                };
+        };
 
-	fragment@2 {
-		target = <&ocp>;
-		__overlay__ {
-			status = "okay";
+        fragment@2 {
+                target = <&ocp>;
+                __overlay__ {
+                        status = "okay";
                         pwmleds {
                             compatible = "pwm-leds";
 
                             lcd_backlight {
                                 pwms = <&pwm 15 16000000>;
                                 label = "heater:white:lcd";
-				max-brightness = <4095>;
+                                max-brightness = <4095>;
                             };
                             red {
                                 pwms = <&pwm 14 16000000>;
                                 label = "heater:status:red";
-				max-brightness = <4095>;
+                                max-brightness = <4095>;
                             };
                             green {
                                 pwms = <&pwm 13 16000000>;
                                 label = "heater:status:green";
-				max-brightness = <4095>;
+                                max-brightness = <4095>;
                             };
                             blue {
                                 pwms = <&pwm 12 16000000>;
                                 label = "heater:status:blue";
-				max-brightness = <4095>;
+                                max-brightness = <4095>;
                             };
 
                             led1  {
-				pwms = <&pwm 10 16000000>;
-				label = "heater:led1:green";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 10 16000000>;
+                                label = "heater:led1:green";
+                                max-brightness = <4095>;
+                            };
                             led2  {
-				pwms = <&pwm 11 16000000>;
-				label = "heater:led1:red";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 11 16000000>;
+                                label = "heater:led1:red";
+                                max-brightness = <4095>;
+                            };
                             led3  {
-				pwms = <&pwm 4  16000000>;
-				label = "heater:led2:green";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 4  16000000>;
+                                label = "heater:led2:green";
+                                max-brightness = <4095>;
+                            };
                             led4  {
-				pwms = <&pwm 5  16000000>;
-				label = "heater:led2:red";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 5  16000000>;
+                                label = "heater:led2:red";
+                                max-brightness = <4095>;
+                            };
                             led5  {
-				pwms = <&pwm 8  16000000>;
-				label = "heater:led3:green";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 8  16000000>;
+                                label = "heater:led3:green";
+                                max-brightness = <4095>;
+                            };
                             led6  {
-				pwms = <&pwm 9  16000000>;
-				label = "heater:led3:red";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 9  16000000>;
+                                label = "heater:led3:red";
+                                max-brightness = <4095>;
+                            };
                             led7  {
-				pwms = <&pwm 6  16000000>;
-				label = "heater:led4:green";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 6  16000000>;
+                                label = "heater:led4:green";
+                                max-brightness = <4095>;
+                            };
                             led8  {
-				pwms = <&pwm 7  16000000>;
-				label = "heater:led4:red";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 7  16000000>;
+                                label = "heater:led4:red";
+                                max-brightness = <4095>;
+                            };
                             led9  {
-				pwms = <&pwm 0  16000000>;
-				label = "heater:led5:green";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 0  16000000>;
+                                label = "heater:led5:green";
+                                max-brightness = <4095>;
+                            };
                             led10 {
-				pwms = <&pwm 1  16000000>;
-				label = "heater:led5:red";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 1  16000000>;
+                                label = "heater:led5:red";
+                                max-brightness = <4095>;
+                            };
                             led11 {
-				pwms = <&pwm 2  16000000>;
-				label = "heater:led6:green";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 2  16000000>;
+                                label = "heater:led6:green";
+                                max-brightness = <4095>;
+                            };
                             led12 {
-				pwms = <&pwm 3  16000000>;
-				label = "heater:led6:red";
-				max-brightness = <4095>;
-			    };
+                                pwms = <&pwm 3  16000000>;
+                                label = "heater:led6:red";
+                                max-brightness = <4095>;
+                            };
                         };
                 };
         };
@@ -267,7 +267,7 @@
                                 compatible = "gpio-keys";
                                 #address-cells = <1>;
                                 #size-cells = <0>;
-                                
+
                                 autorepeat;
                                 button@1 {
                                         label = "down";
@@ -347,7 +347,7 @@
                                         gpio = <&gpio2 4  0x00>;
                                         output;
                                 };
-                                
+
                                 lcd_d5 {
                                         gpio-name = "lcd_d5";
                                         gpio = <&gpio2 1  0x00>;
@@ -389,13 +389,13 @@
                                         gpio = <&gpio3 25 0x00>;
                                         output;
                                 };
-                                
+
                                 xbee_reset {
                                         gpio-name = "xbee_reset";
                                         gpio = <&gpio3 12 0x00>;
                                         output;
                                 };
-                        };                                       
+                        };
                 };
         };
 };
