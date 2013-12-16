@@ -1067,7 +1067,7 @@ Element["onsolder" "SON-8" "U2" "unknown" 43.5700mm 82.2250mm 150.00mil 2.0000mm
 
 	)
 
-Element["onsolder" "1206" "D1" "unknown" 1950.00mil 1100.00mil -85.00mil 90.00mil 0 80 "auto"]
+Element["onsolder" "1206" "D1" "unknown" 1950.00mil 1150.00mil -85.00mil 90.00mil 0 80 "auto"]
 (
 	Pad[60.00mil -5.00mil 60.00mil 5.00mil 60.00mil 30.00mil 76.00mil "" "1" "onsolder,square"]
 	Pad[-60.00mil -5.00mil -60.00mil 5.00mil 60.00mil 30.00mil 76.00mil "" "2" "onsolder,square"]
@@ -1828,14 +1828,14 @@ Element["" "JUMPER2" "HEAT_SS" "unknown" 2250.00mil 675.00mil 50.00mil 50.00mil 
 
 	)
 
-Element["onsolder" "0603" "R3" "1k" 61.9650mm 1700.00mil 0.0000 2.0000mm 0 100 "auto"]
+Element["onsolder" "0603" "R3" "100" 49.1600mm 1075.00mil 0.0000 -2.0000mm 2 100 "auto"]
 (
-	Pad[-0.9500mm 0.0000 -0.8500mm 0.0000 0.8000mm 12.00mil 0.9524mm "1" "1" "onsolder,square"]
-	Pad[0.8500mm 0.0000 0.9500mm 0.0000 0.8000mm 12.00mil 0.9524mm "2" "2" "onsolder,square,edge2"]
-	ElementLine [1.5024mm -0.5524mm -1.5024mm -0.5524mm 5.00mil]
-	ElementLine [-1.5024mm -0.5524mm -1.5024mm 0.5524mm 5.00mil]
+	Pad[0.8500mm 0.0000 0.9500mm 0.0000 0.8000mm 12.00mil 0.9524mm "1" "1" "onsolder,square,edge2"]
+	Pad[-0.9500mm 0.0000 -0.8500mm 0.0000 0.8000mm 12.00mil 0.9524mm "2" "2" "onsolder,square"]
 	ElementLine [-1.5024mm 0.5524mm 1.5024mm 0.5524mm 5.00mil]
-	ElementLine [1.5024mm 0.5524mm 1.5024mm -0.5524mm 5.00mil]
+	ElementLine [1.5024mm -0.5524mm 1.5024mm 0.5524mm 5.00mil]
+	ElementLine [-1.5024mm -0.5524mm 1.5024mm -0.5524mm 5.00mil]
+	ElementLine [-1.5024mm -0.5524mm -1.5024mm 0.5524mm 5.00mil]
 
 	)
 
@@ -2034,6 +2034,29 @@ Element["" "encoder-with-switch" "ENC" "unknown" 1800.00mil 44.7000mm 0.0000 0.0
 	ElementLine [-8.0000mm -9.0000mm 8.5000mm -9.0000mm 0.3000mm]
 	ElementLine [-8.0000mm -9.0000mm -8.0000mm 9.0000mm 0.3000mm]
 	ElementLine [-8.0000mm 9.0000mm 8.5000mm 9.0000mm 0.3000mm]
+
+	)
+
+Element["onsolder" "0603" "R13" "1k" 61.9650mm 1700.00mil 0.0000 2.0000mm 0 100 "auto"]
+(
+	Pad[-0.9500mm 0.0000 -0.8500mm 0.0000 0.8000mm 12.00mil 0.9524mm "1" "1" "onsolder,square"]
+	Pad[0.8500mm 0.0000 0.9500mm 0.0000 0.8000mm 12.00mil 0.9524mm "2" "2" "onsolder,square,edge2"]
+	ElementLine [1.5024mm -0.5524mm -1.5024mm -0.5524mm 5.00mil]
+	ElementLine [-1.5024mm -0.5524mm -1.5024mm 0.5524mm 5.00mil]
+	ElementLine [-1.5024mm 0.5524mm 1.5024mm 0.5524mm 5.00mil]
+	ElementLine [1.5024mm 0.5524mm 1.5024mm -0.5524mm 5.00mil]
+
+	)
+
+Element["onsolder" "SOT23" "Q3" "unknown" 2514.00mil 1057.00mil 25.00mil -110.00mil 1 100 "auto"]
+(
+	Pad[0.0000 -3.00mil 0.0000 3.00mil 34.00mil 30.00mil 40.00mil "1" "1" "onsolder,square,edge2"]
+	Pad[-78.00mil -3.00mil -78.00mil 3.00mil 34.00mil 30.00mil 40.00mil "2" "2" "onsolder,square,edge2"]
+	Pad[-39.00mil -85.00mil -39.00mil -79.00mil 34.00mil 30.00mil 40.00mil "3" "3" "onsolder,square"]
+	ElementLine [25.00mil -110.00mil 25.00mil 29.00mil 10.00mil]
+	ElementLine [-103.00mil 29.00mil 25.00mil 29.00mil 10.00mil]
+	ElementLine [-103.00mil -110.00mil -103.00mil 29.00mil 10.00mil]
+	ElementLine [-103.00mil -110.00mil 25.00mil -110.00mil 10.00mil]
 
 	)
 Layer(1 "top")
@@ -2432,7 +2455,7 @@ Layer(2 "bottom")
 	Line[550.00mil 1175.00mil 1775.00mil 1175.00mil 25.00mil 20.00mil "clearline"]
 	Line[1775.00mil 1175.00mil 1825.00mil 1125.00mil 25.00mil 20.00mil "clearline"]
 	Line[1825.00mil 1125.00mil 1865.00mil 1125.00mil 25.00mil 20.00mil "clearline"]
-	Line[1865.00mil 1125.00mil 1890.00mil 1100.00mil 25.00mil 20.00mil "clearline"]
+	Line[1865.00mil 1125.00mil 1890.00mil 1150.00mil 25.00mil 20.00mil "clearline"]
 	Line[2375.00mil 1600.00mil 2400.00mil 1575.00mil 25.00mil 20.00mil "clearline"]
 	Line[2400.00mil 1575.00mil 2400.00mil 39.0000mm 25.00mil 20.00mil "clearline"]
 	Line[100.00mil 2500.00mil 150.00mil 2550.00mil 10.00mil 20.00mil "clearline"]
@@ -2549,19 +2572,12 @@ Layer(2 "bottom")
 	Line[57.4150mm 3375.00mil 57.4150mm 86.9100mm 25.00mil 20.00mil "clearline"]
 	Line[2425.00mil 1125.00mil 2400.00mil 1150.00mil 25.00mil 20.00mil "clearline"]
 	Line[2400.00mil 1150.00mil 2060.00mil 1150.00mil 25.00mil 20.00mil "clearline"]
-	Line[2060.00mil 1150.00mil 2010.00mil 1100.00mil 25.00mil 20.00mil "clearline"]
-	Line[49.4350mm 875.00mil 1875.00mil 875.00mil 25.00mil 20.00mil "clearline"]
+	Line[2060.00mil 1150.00mil 2010.00mil 1150.00mil 25.00mil 20.00mil "clearline"]
 	Line[1875.00mil 875.00mil 1850.00mil 900.00mil 25.00mil 20.00mil "clearline"]
 	Line[1850.00mil 900.00mil 1850.00mil 1000.00mil 25.00mil 20.00mil "clearline"]
 	Line[59.4350mm 975.00mil 2300.00mil 975.00mil 25.00mil 20.00mil "clearline"]
 	Line[2475.00mil 1700.00mil 2475.00mil 1550.00mil 25.00mil 20.00mil "clearline"]
 	Line[2475.00mil 1550.00mil 2500.00mil 1525.00mil 25.00mil 20.00mil "clearline"]
-	Line[2500.00mil 1525.00mil 2500.00mil 1100.00mil 25.00mil 20.00mil "clearline"]
-	Line[2500.00mil 1100.00mil 2437.50mil 1037.50mil 25.00mil 20.00mil "clearline"]
-	Line[2437.50mil 1037.50mil 2212.50mil 1037.50mil 25.00mil 20.00mil "clearline"]
-	Line[2212.50mil 1037.50mil 2150.00mil 975.00mil 25.00mil 20.00mil "clearline"]
-	Line[2150.00mil 975.00mil 49.4350mm 975.00mil 25.00mil 20.00mil "clearline"]
-	Line[2464.00mil 1207.00mil 2464.00mil 35.5744mm 25.00mil 20.00mil "clearline"]
 	Line[2464.00mil 35.5744mm 2400.00mil 37.2000mm 25.00mil 20.00mil "clearline"]
 	Line[2386.00mil 1207.00mil 2386.00mil 1261.00mil 25.00mil 20.00mil "clearline"]
 	Line[2386.00mil 1261.00mil 2400.00mil 1275.00mil 25.00mil 20.00mil "clearline"]
@@ -2742,6 +2758,22 @@ Layer(2 "bottom")
 	Line[1725.00mil 1875.00mil 1700.00mil 1900.00mil 25.00mil 20.00mil "clearline"]
 	Line[1700.00mil 1900.00mil 1700.00mil 2550.00mil 25.00mil 20.00mil "clearline"]
 	Line[1750.00mil 2100.00mil 1975.00mil 2100.00mil 10.00mil 20.00mil "clearline"]
+	Line[1825.00mil 1125.00mil 1850.00mil 1125.00mil 25.00mil 20.00mil "clearline"]
+	Line[1850.00mil 1125.00mil 1900.00mil 1075.00mil 25.00mil 20.00mil "clearline"]
+	Line[50.0600mm 1075.00mil 50.0600mm 25.3900mm 25.00mil 20.00mil "clearline"]
+	Line[50.0600mm 25.3900mm 49.4350mm 975.00mil 25.00mil 20.00mil "clearline"]
+	Line[49.4350mm 875.00mil 2050.00mil 875.00mil 25.00mil 20.00mil "clearline"]
+	Line[2212.50mil 1037.50mil 2050.00mil 875.00mil 25.00mil 20.00mil "clearline"]
+	Line[2212.50mil 1037.50mil 2387.50mil 1037.50mil 25.00mil 20.00mil "clearline"]
+	Line[2387.50mil 1037.50mil 2450.00mil 975.00mil 25.00mil 20.00mil "clearline"]
+	Line[2450.00mil 975.00mil 2475.00mil 975.00mil 25.00mil 20.00mil "clearline"]
+	Line[2500.00mil 1525.00mil 2500.00mil 1071.00mil 25.00mil 20.00mil "clearline"]
+	Line[2500.00mil 1071.00mil 2514.00mil 1057.00mil 25.00mil 20.00mil "clearline"]
+	Line[2464.00mil 1207.00mil 2464.00mil 35.5456mm 25.00mil 20.00mil "clearline"]
+	Line[2464.00mil 35.5456mm 62.6000mm 1400.00mil 25.00mil 20.00mil "clearline"]
+	Line[2436.00mil 1057.00mil 2418.00mil 1057.00mil 25.00mil 20.00mil "clearline"]
+	Line[2418.00mil 1057.00mil 2375.00mil 1100.00mil 25.00mil 20.00mil "clearline"]
+	Line[2375.00mil 1100.00mil 2300.00mil 1100.00mil 25.00mil 20.00mil "clearline"]
 )
 Layer(3 "ground")
 (
@@ -2893,6 +2925,7 @@ NetList()
 		Connect("D1-2")
 		Connect("P9-7")
 		Connect("P9-8")
+		Connect("R3-2")
 		Connect("RELAY-8")
 		Connect("U2-2")
 	)
@@ -3038,6 +3071,7 @@ NetList()
 		Connect("P9-45")
 		Connect("P9-46")
 		Connect("Q1-2")
+		Connect("Q3-2")
 		Connect("R6-1")
 		Connect("R7-1")
 		Connect("R8-1")
@@ -3057,7 +3091,6 @@ NetList()
 		Connect("U4-23")
 		Connect("U4-24")
 		Connect("U4-25")
-		Connect("U5-2")
 		Connect("V0-2")
 		Connect("V0-3")
 		Connect("XBEE-10")
@@ -3070,7 +3103,7 @@ NetList()
 	Net("HEATER_EN_SS" "(unknown)")
 	(
 		Connect("P8-11")
-		Connect("R3-1")
+		Connect("R13-1")
 	)
 	Net("I2C2_SCL" "(unknown)")
 	(
@@ -3420,18 +3453,28 @@ NetList()
 	)
 	Net("unnamed_net41" "(unknown)")
 	(
-		Connect("R3-2")
+		Connect("R3-1")
 		Connect("U5-1")
 	)
 	Net("unnamed_net42" "(unknown)")
 	(
-		Connect("HEAT_SS-1")
-		Connect("U5-4")
+		Connect("Q3-3")
+		Connect("U5-2")
 	)
 	Net("unnamed_net43" "(unknown)")
 	(
+		Connect("HEAT_SS-1")
+		Connect("U5-4")
+	)
+	Net("unnamed_net44" "(unknown)")
+	(
 		Connect("HEAT_SS-2")
 		Connect("U5-6")
+	)
+	Net("unnamed_net45" "(unknown)")
+	(
+		Connect("Q3-1")
+		Connect("R13-2")
 	)
 	Net("XBEE_\\_CTS\\_" "(unknown)")
 	(
