@@ -2042,9 +2042,6 @@ Layer(1 "top")
 	Line[437.50mil 702.50mil 437.50mil 747.50mil 10.00mil 20.00mil "clearline"]
 	Line[390.00mil 795.00mil 230.00mil 795.00mil 10.00mil 20.00mil "clearline"]
 	Line[230.00mil 795.00mil 225.00mil 800.00mil 10.00mil 20.00mil "clearline"]
-	Line[437.50mil 497.50mil 437.50mil 422.50mil 10.00mil 20.00mil "clearline"]
-	Line[437.50mil 422.50mil 420.00mil 405.00mil 10.00mil 20.00mil "clearline"]
-	Line[420.00mil 405.00mil 230.00mil 405.00mil 10.00mil 20.00mil "clearline"]
 	Line[230.00mil 405.00mil 225.00mil 400.00mil 10.00mil 20.00mil "clearline"]
 	Line[412.50mil 497.50mil 227.50mil 497.50mil 10.00mil 20.00mil "clearline"]
 	Line[227.50mil 497.50mil 225.00mil 500.00mil 10.00mil 20.00mil "clearline"]
@@ -2214,6 +2211,9 @@ Layer(1 "top")
 	Line[1075.00mil 2325.00mil 1075.00mil 2475.00mil 25.00mil 20.00mil "clearline"]
 	Line[1075.00mil 2475.00mil 1175.00mil 2575.00mil 25.00mil 20.00mil "clearline"]
 	Line[1575.00mil 2100.00mil 1750.00mil 2100.00mil 10.00mil 20.00mil "clearline"]
+	Line[437.50mil 497.50mil 437.50mil 437.50mil 10.00mil 20.00mil "clearline"]
+	Line[437.50mil 437.50mil 400.00mil 400.00mil 10.00mil 20.00mil "clearline"]
+	Line[400.00mil 400.00mil 225.00mil 400.00mil 10.00mil 20.00mil "clearline"]
 )
 Layer(2 "bottom")
 (
