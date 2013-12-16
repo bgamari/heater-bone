@@ -21,7 +21,7 @@ pinwidthhorizontal=400
 # use comment= if there are special information you want to add
 version=20060113 1
 name=Encoder
-device=Rotary encoder
+device=Three LED rotary encoder
 refdes=U?
 footprint=rotary-encoder
 description=Rotary encoder
@@ -44,6 +44,10 @@ numslots=0
 #pinnr	seq	type	style	posit.	net	label	
 #-----------------------------------------------------
 A		pas	line	l		A
+C		pas	line	l		C
 B		pas	line	l		B
-SW		pas	line	r		SW
 COM		pas	line	r		COM
+SW		pas	line	r		SW
+LED1		pas	line	r		LED1
+LED2		pas	line	r		LED2
+LED3		pas	line	r		LED3
