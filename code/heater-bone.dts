@@ -328,9 +328,9 @@
                                         output;
                                 };
 
-                                led_enable {
-                                        gpio-name = "led_enable";
-                                        gpio = <&gpio2 16 0x00>;
+                                heater_enable_ss {
+                                        gpio-name = "heater_enable_ss";
+                                        gpio = <&gpio2 13 0x00>;
                                         output;
                                 };
 
@@ -391,6 +391,12 @@
                                 lcd_e  {
                                         gpio-name = "lcd_e";
                                         gpio = <&gpio3 25 0x00>;
+                                        output;
+                                };
+
+                                xbee_pwr {
+                                        gpio-name = "xbee_pwr";
+                                        gpio = <&gpio3 11 0x00>;
                                         output;
                                 };
 
