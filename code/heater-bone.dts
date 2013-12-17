@@ -18,23 +18,23 @@
         /* state the resources this cape uses */
         exclusive-use =
                 /* the pin header uses */
-                "P8.7",  /* BTN4:      GPIO2.2    */
-                "P8.8",  /* BTN3:      GPIO2.3    */
-                "P8.9",  /* BTN2:      GPIO2.5    */
-                "P8.10", /* BTN1:      GPIO2.4    */
+                "P8.7",  /* BTN4:         GPIO2.2    */
+                "P8.8",  /* BTN3:         GPIO2.3    */
+                "P8.9",  /* BTN2:         GPIO2.5    */
+                "P8.10", /* BTN1:         GPIO2.4    */
 
-                "P8.11", /* HEATER_EN_SS: GPIO1.13   */
-                "P8.12", /* HEATER_EN: GPIO1.12   */
+                "P8.11", /* HEATER_EN_SS: GPIO1.13 (gpio44)  */
+                "P8.12", /* HEATER_EN:    GPIO1.12  (gpio45)    */
 
-                "P8.13", /* ENC_SW:    GPIO0.23   */
-                "P8.14", /* ENC_B:     GPIO0.26   */
-                "P8.15", /* ENC_A:     GPIO1.15   */
+                "P8.13", /* ENC_SW:       GPIO0.23   */
+                "P8.14", /* ENC_B:        GPIO0.26   */
+                "P8.15", /* ENC_A:        GPIO1.15   */
 
-                "P8.16", /* LCD_D7:    GPIO1.14   */
-                "P8.17", /* LCD_D5:    GPIO0.27   */
-                "P8.18", /* LCD_D6:    GPIO2.1    */
-                "P8.19", /* LCD_D4:    GPIO0.22   */
-                "P8.26", /* LCD_D3:    GPIO1.29   */
+                "P8.16", /* LCD_D7:       GPIO1.14   */
+                "P8.17", /* LCD_D5:       GPIO0.27   */
+                "P8.18", /* LCD_D6:       GPIO2.1    */
+                "P8.19", /* LCD_D4:       GPIO0.22   */
+                "P8.26", /* LCD_D3:       GPIO1.29   */
                 // "P8.27", /* LCD_D1:    GPIO2.22   */
                 // "P8.28", /* LCD_D2:    GPIO2.24   */
                 // "P8.29", /* LCD_E:     GPIO2.23   */
@@ -45,25 +45,23 @@
                 // "P8.32", /* XBEE_RTSn: UART5_RTSn */
                 // "P8.37", /* XBEE_TxD:  UART5_TxD  */
                 // "P8.38", /* XBEE_RxD:  UART5_RxD  */
-                // "P8.39", /* XBEE_RESETn: GPIO2.12 */
-                // "P8.40", /* XBEE_SLEEP:  GPIO2.13 */
-                // "P8.42", /* XBEE_PWR:  GPIO2.11   */
+                // "P8.39", /* XBEE_RESETn: GPIO2.12 (gpio76) */
+                // "P8.40", /* XBEE_SLEEP:  GPIO2.13 (gpio77) */
+                // "P8.42", /* XBEE_PWR:  GPIO2.11  (gpio75)  */
 
-                "P9.15", /* LEDS_ENn:  GPIO1.16   */
+                "P9.19", /* SCL:          I2C2_SCL   */
+                "P9.20", /* SDA:          I2C2_SDA   */
 
-                "P9.19", /* SCL:       I2C2_SCL   */
-                "P9.20", /* SDA:       I2C2_SDA   */
+                "P9.23", /* ADC_INT:      GPIO1.17   */
 
-                "P9.23", /* ADC_INT:   GPIO1.17   */
+                "P9.42", /* NRF_CSn:      SPI1_CS1   */
+                "P9.26", /* NRF_CE:       GPIO0.14   */
+                "P9.27", /* NRF_IRQ:      GPIO3.19   */
 
-                "P9.42", /* NRF_CSn:   SPI1_CS1   */
-                "P9.26", /* NRF_CE:    GPIO0.14   */
-                "P9.27", /* NRF_IRQ:   GPIO3.19   */
-
-                //"P9.29", /* SPI1_MOSI: SPI1_D0    */
-                "P9.30", /* SPI1_MISO: SPI1_D1    */
-                //"P9.31", /* SPI1_SCLK: SPI1_SCLK  */
-                "P9.42", /* SPI1_CS1: NRF_CS      */
+                //"P9.29", /* SPI1_MOSI:  SPI1_D0    */
+                "P9.30", /* SPI1_MISO:    SPI1_D1    */
+                //"P9.31", /* SPI1_SCLK:  SPI1_SCLK  */
+                "P9.42", /* SPI1_CS1:     NRF_CS      */
 
                 /* the hardware IP uses */
                 "uart5",
