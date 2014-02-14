@@ -156,7 +156,8 @@
                             #pwm-cells = <2>;
                             reg = <0x40>;
                             invert;
-                            open-drain;
+                            // Don't use open-drain on v2 of board due to LCD backlight
+                            //open-drain;
                         };
 
                         adc: adt7411@96 {
