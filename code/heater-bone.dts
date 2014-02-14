@@ -239,22 +239,22 @@
                             };
                             led9  {
                                 pwms = <&pwm 0  16000000>;
-                                label = "heater:led5:green";
+                                label = "heater:encoder:red";
                                 max-brightness = <4095>;
                             };
                             led10 {
                                 pwms = <&pwm 1  16000000>;
-                                label = "heater:led5:red";
+                                label = "heater:encoder:green";
                                 max-brightness = <4095>;
                             };
                             led11 {
                                 pwms = <&pwm 2  16000000>;
-                                label = "heater:led6:green";
+                                label = "heater:encoder:blue";
                                 max-brightness = <4095>;
                             };
                             led12 {
                                 pwms = <&pwm 3  16000000>;
-                                label = "heater:led6:red";
+                                label = "heater:led12:red";
                                 max-brightness = <4095>;
                             };
                         };
