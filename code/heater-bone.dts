@@ -23,23 +23,23 @@
                 "P8.9",  /* BTN2:         GPIO2.5    */
                 "P8.10", /* BTN1:         GPIO2.4    */
 
-                "P8.11", /* HEATER_EN_SS: GPIO1.13 (gpio44)  */
-                "P8.12", /* HEATER_EN:    GPIO1.12  (gpio45)    */
+                "P8.11", /* HEATER_EN_SS: GPIO1.13 (gpio44) */
+                "P8.12", /* HEATER_EN:    GPIO1.12 (gpio45) */
 
-                "P8.13", /* ENC_SW:       GPIO0.23   */
-                "P8.14", /* ENC_B:        GPIO0.26   */
-                "P8.15", /* ENC_A:        GPIO1.15   */
+                "P8.13", /* ENC_SW:       GPIO0.23 (gpio23)  */
+                "P8.14", /* ENC_B:        GPIO0.26 (gpio26) */
+                "P8.15", /* ENC_A:        GPIO1.15 (gpio47) */
 
-                "P8.16", /* LCD_D7:       GPIO1.14   */
-                "P8.17", /* LCD_D5:       GPIO0.27   */
-                "P8.18", /* LCD_D6:       GPIO2.1    */
-                "P8.19", /* LCD_D4:       GPIO0.22   */
-                "P8.26", /* LCD_D3:       GPIO1.29   */
-                // "P8.27", /* LCD_D1:    GPIO2.22   */
-                // "P8.28", /* LCD_D2:    GPIO2.24   */
-                // "P8.29", /* LCD_E:     GPIO2.23   */
-                // "P8.30", /* LCD_D0:    GPIO2.25   */
-                // "P8.34", /* LCD_RS:    GPIO2.17   */
+                "P8.16", /* LCD_D7:       GPIO1.14 (gpio46) */
+                "P8.17", /* LCD_D5:       GPIO0.27 (gpio27) */
+                "P8.18", /* LCD_D6:       GPIO2.1  (gpio65) */
+                "P8.19", /* LCD_D4:       GPIO0.22 (gpio22) */
+                "P8.26", /* LCD_D3:       GPIO1.29 (gpio61) */
+                // "P8.27", /* LCD_D1:    GPIO2.22 (gpio86) */
+                // "P8.28", /* LCD_D2:    GPIO2.24 (gpio88) */
+                // "P8.29", /* LCD_E:     GPIO2.23 (gpio87) */
+                // "P8.30", /* LCD_D0:    GPIO2.25 (gpio89) */
+                // "P8.34", /* LCD_RS:    GPIO2.17 (gpio81) */
 
                 // "P8.31", /* XBEE_CTSn: UART5_CTSn */
                 // "P8.32", /* XBEE_RTSn: UART5_RTSn */
