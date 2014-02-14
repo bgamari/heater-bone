@@ -1,45 +1,74 @@
 {-# LANGUAGE DeriveFunctor, DeriveFoldable, DeriveTraversable #-}
 
 module LCD ( LCDPins(..)
-	   , LCD
+           , LCD
            , open
+           , queue
+             -- * Actions
            , clear
            , home
            , write
+           , setDisplay
+           , setCursor
+           , setBlink
            ) where
 
 import Data.Word
 import Data.Bits
 import Data.Char (ord)
-import Control.Concurrent (threadDelay)
 import qualified GPIO as GPIO
 import GPIO (GPIO, PinNumber)
 import System.IO
+import Control.Monad (void, forever)
+import Control.Monad.Trans.Reader
+import Control.Monad.Trans.State
+import Control.Monad.Trans.Class
 import Control.Applicative
 import Data.Traversable as T
 import Data.Foldable
+import Control.Concurrent.STM
+import Control.Concurrent (threadDelay, forkIO)
 
 data LCDPins a = LCDPins { rsPin, ePin :: a
-	                 , dbPins :: [a] -- | DB4 - DB7
+                         , dbPins :: [a] -- | DB4 - DB7
                          }
-   	       deriving (Functor, Foldable, Traversable)
+               deriving (Functor, Foldable, Traversable)
 
-data LCD = LCD { lcdPins :: LCDPins GPIO }
+data RS = Reg | RAM
+
+data LCDState = LCDSt { lcdDisplay :: Bool
+                      , lcdCursor  :: Bool
+                      , lcdBlink   :: Bool
+                      }
+
+type ActionM = StateT LCDState (ReaderT (LCDPins GPIO) IO)
+type Action = ActionM ()
+
+data LCD = LCD (TQueue Action)
 
 open :: LCDPins PinNumber -> IO LCD
 open pins = do
     --traverse GPIO.export pins
-    lcd <- LCD <$> traverse (\n->GPIO.open n GPIO.Out) pins
+    lcdPins <- traverse (\n->GPIO.open n GPIO.Out) pins
+    q <- newTQueueIO
+    let lcd = LCD q
+        s = LCDSt False False False
 
-    command Reg 0x33 lcd
-    command Reg 0x32 lcd
-    command Reg 0x27 lcd -- 2-line 5x7 matrix
-    command Reg 0x0c lcd -- turn off cursor
-    command Reg 0x06 lcd -- shift cursor right
-    clear lcd
+    queue lcd $ do
+      command Reg 0x33
+      command Reg 0x32
+      command Reg 0x27 -- 2-line 5x7 matrix
+      updateDisplayMode
+      command Reg 0x06 -- shift cursor right
+      clear
+    
+    forkIO $ void $ runReaderT (runStateT (worker q) s) lcdPins
     return lcd
 
-data RS = Reg | RAM
+worker :: TQueue Action -> Action
+worker q = forever $ do
+    action <- lift $ lift $ atomically $ readTQueue q
+    action
 
 bits :: Bits a => a -> [Bool]
 bits a = go 0
@@ -47,35 +76,65 @@ bits a = go 0
     go i | i < bitSize a  = testBit a i : go (i+1)
          | otherwise      = []
 
-command :: RS -> Word8 -> LCD -> IO ()
-command rs d (LCD pins) = do
-    threadDelay (1000*1000)
-    flip GPIO.write (rsPin pins) $ case rs of
-      Reg -> False
-      RAM -> True
-    nibble (d `shiftR` 4)
-    nibble d
+command :: RS -> Word8 -> Action
+command rs d = lift $ ReaderT $ go
   where
-    nibble :: Word8 -> IO ()
-    nibble n = do
-      T.sequence $ GPIO.write <$> take 4 (bits n) <*> dbPins pins
-      pulseEnable
+    go :: LCDPins GPIO -> IO ()
+    go pins = do
+      threadDelay (1000*1000)
+      flip GPIO.write (rsPin pins) $ case rs of
+        Reg -> False
+        RAM -> True
+      nibble (d `shiftR` 4)
+      nibble d
+      where
+        nibble :: Word8 -> IO ()
+        nibble n = do
+          T.sequence $ GPIO.write <$> take 4 (bits n) <*> dbPins pins
+          pulseEnable
 
-    pulseEnable = do
-      forM_ [False, True, False] $ \v->do
-        GPIO.write v (ePin pins)
-        threadDelay 1
+        pulseEnable = do
+          forM_ [False, True, False] $ \v->do
+            GPIO.write v (ePin pins)
+            threadDelay 1
 
-clear :: LCD -> IO ()
+queue :: LCD -> Action -> IO ()
+queue (LCD q) action = atomically $ writeTQueue q action
+
+updateDisplayMode :: Action
+updateDisplayMode = do
+    s <- get
+    let _bit :: Bits a => Int -> Bool -> a -> a
+        _bit bit True  x = setBit x bit
+        _bit bit False x = clearBit x bit
+        v = _bit 2 (lcdDisplay s)
+          $ _bit 1 (lcdCursor s)
+          $ _bit 0 (lcdBlink s)
+          $ 0x8
+    command Reg v
+
+modifyDisplayMode :: (LCDState -> LCDState) -> Action
+modifyDisplayMode f = modify f >> updateDisplayMode
+
+setDisplay :: Bool -> Action
+setDisplay v = modifyDisplayMode $ \s->s {lcdDisplay = v}
+
+setCursor :: Bool -> Action
+setCursor v = modifyDisplayMode $ \s->s {lcdCursor = v}
+
+setBlink :: Bool -> Action
+setBlink v = modifyDisplayMode $ \s->s {lcdBlink = v}
+
+clear :: Action
 clear = command Reg 0x01
 
-home :: LCD -> IO ()
+home :: Action
 home = command Reg 0x02
 
-write :: String -> LCD -> IO ()
-write s lcd = go s
+write :: String -> Action
+write s = go s
   where
     go []          = return ()
-    go ('\n':rest) = command Reg 0xc0 lcd >> go rest
-    go (c:rest)    = command RAM (fromIntegral $ ord c) lcd >> go rest
+    go ('\n':rest) = command Reg 0xc0 >> go rest
+    go (c:rest)    = command RAM (fromIntegral $ ord c) >> go rest
 

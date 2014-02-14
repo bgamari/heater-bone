@@ -14,6 +14,7 @@ main = do
     lcd <- LCD.open lcdPins
     Just bklt <- runMaybeT $ LED.open backlight
     LED.setBrightness (LED.brightness 0.9) bklt
-    LCD.home lcd
-    LCD.write "Hello World!" lcd
+    LCD.queue lcd $ do
+      LCD.home
+      LCD.write "Hello World!"
 
