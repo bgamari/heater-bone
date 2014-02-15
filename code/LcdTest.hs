@@ -1,3 +1,4 @@
+import Control.Monad (forever)
 import Control.Monad.Trans.Maybe
 import qualified LCD
 import LCD (LCD, LCDPins(..))
@@ -17,4 +18,8 @@ main = do
     LCD.queue lcd $ do
       LCD.home
       LCD.write "Hello World!"
+      LCD.setCursor False
+      LCD.setBlink False
+      LCD.setDisplay True
+    forever $ getLine >>= LCD.queue lcd . LCD.write
 
