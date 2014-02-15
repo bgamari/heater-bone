@@ -160,9 +160,9 @@
                             //open-drain;
                         };
 
-                        adc: adt7411@96 {
+                        adc: adt7411@4b {
                             compatible = "adi,adt7411";
-                            reg = <0x96>;
+                            reg = <0x4b>;
                             #address-cells = <1>;
                             #size-cells = <0>;
                         };
