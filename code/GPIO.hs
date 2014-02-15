@@ -21,7 +21,11 @@ export gpioN = writeFile "/sys/class/gpio/export" (show gpioN)
 
 open :: PinNumber -> Direction -> IO GPIO
 open gpioN dir = do
-    GPIO <$> openFile ("/sys/class/gpio/gpio"++show gpioN++"/value") mode
+    let d = "/sys/class/gpio/gpio"++show gpioN
+    writeFile (d++"/direction") $ case dir of
+      In  -> "in"
+      Out -> "out"
+    GPIO <$> openFile (d++"/value") mode
   where
     mode = case dir of
       In  -> ReadMode
