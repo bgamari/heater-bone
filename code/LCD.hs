@@ -12,6 +12,7 @@ module LCD ( Nibble(..)
            , setDisplay
            , setCursor
            , setBlink
+           , setDDAddress
            ) where
 
 import Data.Word
@@ -132,6 +133,9 @@ setCursor v = modifyDisplayMode $ \s->s {lcdCursor = v}
 
 setBlink :: Bool -> Action
 setBlink v = modifyDisplayMode $ \s->s {lcdBlink = v}
+
+setDDAddress :: Int -> Action
+setDDAddress addr = command Reg (0x80 .|. (addr .&. 0x7f))
 
 clear :: Action
 clear = command Reg 0x01
