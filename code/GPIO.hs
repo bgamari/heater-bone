@@ -7,8 +7,10 @@ module GPIO ( PinNumber
             , write
             ) where
 
-import System.IO
 import Control.Applicative
+import Control.Monad (when)
+import System.Directory
+import System.IO
 
 type PinNumber = Int
 
@@ -22,6 +24,9 @@ export gpioN = writeFile "/sys/class/gpio/export" (show gpioN)
 open :: PinNumber -> Direction -> IO GPIO
 open gpioN dir = do
     let d = "/sys/class/gpio/gpio"++show gpioN
+    exists <- doesDirectoryExist d
+    when (not exists)
+      $ export gpioN
     writeFile (d++"/direction") $ case dir of
       In  -> "in"
       Out -> "out"
