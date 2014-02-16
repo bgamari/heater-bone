@@ -1,6 +1,7 @@
 {-# LANGUAGE DeriveFunctor, DeriveFoldable, DeriveTraversable #-}
 
-module LCD ( LCDPins(..)
+module LCD ( Nibble(..)
+           , LCDPins(..)
            , LCD
            , open
            , queue
@@ -29,10 +30,18 @@ import Data.Foldable
 import Control.Concurrent.STM
 import Control.Concurrent (threadDelay, forkIO)
 
+data Nibble a = Nibble a a a a
+              deriving (Functor, Foldable, Traversable, Show)
+
+instance Applicative Nibble where
+    pure x = Nibble x x x x
+    Nibble a0 a1 a2 a3 <*> Nibble b0 b1 b2 b3 =
+      Nibble (a0 b0) (a1 b1) (a2 b2) (a3 b3)
+
 data LCDPins a = LCDPins { rsPin, ePin :: a
-                         , dbPins :: [a] -- | DB4 - DB7
+                         , dbPins :: Nibble a -- | DB4 - DB7
                          }
-               deriving (Functor, Foldable, Traversable)
+               deriving (Functor, Foldable, Traversable, Show)
 
 data RS = Reg | RAM
 
@@ -70,11 +79,10 @@ worker q = forever $ do
     action <- lift $ lift $ atomically $ readTQueue q
     action
 
-bits :: Bits a => a -> [Bool]
-bits a = go 0
+nibbleOf :: Bits a => a -> Nibble Bool
+nibbleOf n = Nibble (b 0) (b 1) (b 2) (b 3)
   where
-    go i | i < bitSize a  = testBit a i : go (i+1)
-         | otherwise      = []
+    b i = testBit n i
 
 command :: RS -> Word8 -> Action
 command rs d = lift $ ReaderT $ go
@@ -90,13 +98,13 @@ command rs d = lift $ ReaderT $ go
       where
         nibble :: Word8 -> IO ()
         nibble n = do
-          T.sequence $ GPIO.write <$> take 4 (bits n) <*> dbPins pins
+          T.sequence $ GPIO.write <$> nibbleOf n <*> dbPins pins
           pulseEnable
 
         pulseEnable = do
           forM_ [False, True, False] $ \v->do
             GPIO.write v (ePin pins)
-            threadDelay 1
+            threadDelay 10
 
 queue :: LCD -> Action -> IO ()
 queue (LCD q) action = atomically $ writeTQueue q action

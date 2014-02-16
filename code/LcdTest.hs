@@ -6,7 +6,7 @@ import qualified LED
 
 lcdPins = LCDPins { rsPin  = 81
                   , ePin   = 87
-                  , dbPins = [22, 27, 65, 46]
+                  , dbPins = LCD.Nibble 22 27 65 46
                   }
 
 backlight = "heater:white:lcd"

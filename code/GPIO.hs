@@ -30,7 +30,9 @@ open gpioN dir = do
     writeFile (d++"/direction") $ case dir of
       In  -> "in"
       Out -> "out"
-    GPIO <$> openFile (d++"/value") mode
+    h <- openFile (d++"/value") mode
+    hSetBuffering h NoBuffering
+    return (GPIO h)
   where
     mode = case dir of
       In  -> ReadMode
