@@ -21,5 +21,8 @@ main = do
       LCD.setCursor False
       LCD.setBlink False
       LCD.setDisplay True
-    forever $ getLine >>= LCD.queue lcd . LCD.write
+    forever $ getLine >>= \l->LCD.queue lcd $ do
+        LCD.home
+        LCD.clear
+        LCD.write l
 
