@@ -81,7 +81,7 @@ command rs d = lift $ ReaderT $ go
   where
     go :: LCDPins GPIO -> IO ()
     go pins = do
-      threadDelay (1000*1000)
+      threadDelay 1000
       flip GPIO.write (rsPin pins) $ case rs of
         Reg -> False
         RAM -> True
