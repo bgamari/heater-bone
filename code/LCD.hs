@@ -135,7 +135,7 @@ setBlink :: Bool -> Action
 setBlink v = modifyDisplayMode $ \s->s {lcdBlink = v}
 
 setDDAddress :: Int -> Action
-setDDAddress addr = command Reg (0x80 .|. (addr .&. 0x7f))
+setDDAddress addr = command Reg (0x80 .|. (fromIntegral $ addr .&. 0x7f))
 
 clear :: Action
 clear = command Reg 0x01
