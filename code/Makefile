@@ -1,7 +1,8 @@
-all : heater-bone.dtbo
+all : heater-bone.dtb
 
-%.dtbo : %.dts
-	dtc $<  -@ -O dtb -o $@ -b0
+heater-bone.dtb :
+	make -C dtb-rebuilder
+	cp dtb-rebuilder/src/arm/$@ .
 
 .PHONY : install-dtb
 install-dtb : heater-bone.dtbo
