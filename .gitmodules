@@ -1,0 +1,3 @@
+[submodule "code/dtb-rebuilder"]
+	path = code/dtb-rebuilder
+	url = git@github.com:bgamari/dtb-rebuilder.git
